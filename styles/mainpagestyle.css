@@ -1,0 +1,103 @@
+/* Estrutura padrão do site */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: #fd7e09;
+}
+a{
+    text-decoration: none;
+}
+.pag1{
+    height: 100vh;
+}
+.main-menu{
+    height: 10vh;
+}
+.main-menu ul{
+    
+    display: flex;
+    background-color: #4B0101;
+    color: #4B0101 ;
+    height: 10vh;
+}
+.main-menu ul li{
+    margin-top: 3vh;
+    font-size:x-large;
+}
+.main-menu ul li a{
+    color: whitesmoke;
+}
+.theme{
+    margin-top: 10vh;
+    background-color: whitesmoke;
+    height: 70vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button button{
+    height: 5vh;
+    width: 30vh;
+    font-size: larger;
+    background-color: #4B0101;
+    color: whitesmoke;
+    cursor: pointer;
+    border: none;
+}
+
+.pag2{
+    height: 100vh;
+}
+.texto{
+    border-top: 2vh;
+    font-size: xx-large;
+}
+.option-1{
+    width: 100vw;
+    display: flex;
+}
+.option-1 button{
+    height: 20vh;
+    width: 30vw;
+    background-image: url(./imagens/fundobutton.jpg);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: larger;
+    border: none;
+    margin-top: 25vh;
+    border-radius: 20px;
+    background-size: 100%;
+    background-clip: content-box;
+}
+
+.pag3{
+    height: 100vh;
+}
+.title-page3{
+    font-size: xx-large;
+    border-top: 2vh;
+}
+.foodmaster{
+    display: flex;
+}
+.food{
+    margin-top: 20vh;
+    background-color: whitesmoke;
+    width: 50vh;
+    height: 65vh;
+    border-radius: 30px;
+}
+.minbox{
+    width: 40vh;
+    height: 40vh;
+    background-color: black;
+    margin-top: 5vh;
+    border-radius: 10px ;
+}
