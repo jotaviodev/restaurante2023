@@ -6,27 +6,37 @@
     <link rel="stylesheet" href="styles/loginpage.css">
 </head>
 <body>
-    <div class="main-menu">
-        <nav>
-            <ul>
-                <li><a href="./index.html">Início</a></li>
-                <li><a href="./about.html">Sobre nós</a></li>
-                <li><a href="./cardápio.html">Nosso Cardápio</a></li>
-                <li><a href="./reservas.html">Reservas</a></li>
-                <li><a href="./atrações.html">Atrações</a></li>
-                <li><a href="./locais.html">Instalações Físicas</a></li>
-                <li><a href="#rodape">Contatos</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="pag1">
+        <div class="main-menu">
+            <nav>
+                <ul>
+                    <img src="imagens/buchinho.png" href="./index.html" alt="" style="cursor: pointer;">
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./about.html">Sobre nós</a></li>
+                    <li><a href="./cardápio.html">Nosso Cardápio</a></li>
+                    <li><a href="./reservas.html">Reservas</a></li>
+                    <li><a href="./atrações.html">Atrações</a></li>
+                    <li><a href="./locais.html">Instalações Físicas</a></li>
+                    <li><a href="#rodape">Contatos</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
     <div class="form">
         <h3>Login</h3>
-        <form action="">
-            <label for="Email">Email: </label>
-            <input type="text"><br>
-            <label for="senha">Senha: </label>
-            <input type="password"><br>
-            <a href="">Não sou cadastrado</a>
+        <form action="" style="width: 50vh; height: 50vh;">
+            <div class="email">
+                <label for="Email">Email: </label>
+                <input type="email" name="Email" id="Email"style="height: 5vh; width: 100%; margin-bottom: 7vh;"><br>
+            </div>
+            <div class="senha">
+                <label for="senha">Senha: </label>
+                <input type="password" style="height: 5vh; width: 100%;"><br>
+            </div>
+            <a href="">Não sou cadastrado</a><br>
+            <div class="enviar">
+            <input type="submit" value="Login"style="cursor: pointer;"></form>
+            </div>
         </form>
     </div>
 </body>

@@ -1,35 +1,22 @@
-/* Estrutura padrão do site */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-body{
-    background-color: #fd7e09;
-}
-a{
-    text-decoration: none;
-}
-.pag1{
-    height: 100vh;
-}
-.main-menu{
-    height: 10vh;
-}
-.main-menu ul{
-    margin-left: 300px;
+@import url(./estr_global.css);
+.form{
+    height: 50vh;
+    width: 50vh;
     display: flex;
-    background-color: #4B0101;
-    color: #4B0101 ;
-    height: 10vh;
+    flex-direction: column;
+    background-color: aliceblue; 
+    margin-top: 12vh;
     border-radius: 20px;
 }
-.main-menu ul li{
-    margin-top: 3vh;
-    font-size:x-large;
+.email{
+    margin-top: 5vh;
 }
-.main-menu ul li a{
-    color: whitesmoke;
+.form form a{
+    margin-left: 18vh;  
+}
+.enviar input{
+    margin-left: 13vh;
+    margin-top: 10vh;
+    width: 12vw;
+    height: 5vh;
 }
