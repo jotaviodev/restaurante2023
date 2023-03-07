@@ -8,15 +8,12 @@
     margin-top: 12vh;
     border-radius: 20px;
 }
-.email{
-    margin-top: 5vh;
-}
-.form form a{
-    margin-left: 18vh;  
+.form form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 .enviar input{
-    margin-left: 13vh;
-    margin-top: 10vh;
     width: 12vw;
     height: 5vh;
 }

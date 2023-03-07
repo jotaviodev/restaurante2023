@@ -3,24 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro/Login</title>
-    <link rel="stylesheet" href="styles/cardápiopage.css">
+    <link rel="stylesheet" href="styles/cadastropage.css">
 </head>
 <body>
-        <div class="pag1">
-            <div class="main-menu">
-                <nav>
-                    <ul>
-                        <img src="imagens/buchinho.png" href="./index.html" alt="" style="cursor: pointer;">
-                        <li><a href="./index.html">Início</a></li>
-                        <li><a href="./about.html">Sobre nós</a></li>
-                        <li><a href="./cardápio.html">Nosso Cardápio</a></li>
-                        <li><a href="./reservas.html">Reservas</a></li>
-                        <li><a href="./atrações.html">Atrações</a></li>
-                        <li><a href="./locais.html">Instalações Físicas</a></li>
-                        <li><a href="#rodape">Contatos</a></li>
-                        
-                    </ul>
-                </nav>
+    <div class="pag1">
+        <div class="main-menu">
+            <nav>
+                <ul>
+                    <img src="imagens/buchinho.png" href="./index.html" alt="" style="cursor: pointer;">
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./about.html">Sobre nós</a></li>
+                    <li><a href="./cardápio.html">Nosso Cardápio</a></li>
+                    <li><a href="./reservas.html">Reservas</a></li>
+                    <li><a href="./atrações.html">Atrações</a></li>
+                    <li><a href="./locais.html">Instalações Físicas</a></li>
+                    <li><a href="#rodape">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+<div class="formcadastro">
+        <form action=""> 
+            <h1>Crie seu cadastro</h1>
+            <div class="topform">                                  
+                <div class="leftform">
+                    <div class="divnome">
+                        <label for="nome">Nome: </label>
+                        <input type="text" name="nome">
+                    </div>
+                    <div class="divsexo">
+                        <label for="sexo">Sexo: </label><br>
+                        <div class="divsexomasc">
+                            <input type="radio" name="sexo" value="M">
+                                <label>Masculino</label>
+                        </div>
+                        <div class="divsexofem">
+                            <input type="radio" name="sexo" value="F">
+                            <label>Feminino</label>
+                         </div>
+                    </div>  
+                    <div class="divnascimento">
+                    <label for="nascimento">Nascimento: </label>
+                    <input type="date" name="nascimento">
+                    </div>
+                </div>
+                <div class="rightform">
+                    <div class="divemail">
+                        <label for="email">Email: </label>  
+                        <input type="email" name="email"> 
+                    </div>  
+                    <div class="divsenha">
+                        <label for="senha">Senha: </label>
+                        <input type="password" name="senha">
+                    </div>
+                    <div class="divcontato">
+                        <label for="contato">Contato: </label>
+                        <input type="number" name="contato">
+                    </div>
+                </div> 
+            </div> 
+            <div class="bottomform">
+                    <input type="submit" name="enviar" id="enviar">
             </div>
+        </form>
+</div>
 </body>
 </html>
