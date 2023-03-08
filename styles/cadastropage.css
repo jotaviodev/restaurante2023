@@ -36,11 +36,9 @@
 }
 .divsexo{
     display: flex;
-    width: 60%;
+    width: 80%;
 }
-.divsexo .divsexomasc, .divsexo .divsexofem{
+.divsexo .divsexomasc, .divsexo .divsexofem, .divsexo .outro{
     display: flex;
-    width: 20%;
-    
-
+    width: 10%;
 }

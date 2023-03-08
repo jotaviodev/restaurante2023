@@ -51,6 +51,9 @@ a{
     cursor: pointer;
     border: none;
 }
+.button a{
+    color: whitesmoke;
+}
 
 .pag2{
     height: 100vh;
@@ -67,7 +70,7 @@ a{
     height: 20vh;
     width: 30vw;
     background-image: url(./imagens/fundobutton.jpg);
-    color: whitesmoke;
+    background-color: #4B0101;
     cursor: pointer;
     font-size: larger;
     border: none;
@@ -75,6 +78,9 @@ a{
     border-radius: 20px;
     background-size: 100%;
     background-clip: content-box;
+}
+.option-1 button a{
+    color: whitesmoke;
 }
 
 .pag3{
@@ -100,4 +106,30 @@ a{
     background-color: black;
     margin-top: 5vh;
     border-radius: 10px ;
+}
+.rodape{
+    height: 30vh;
+    background-color: #4B0101;
+    width: 100%;
+    display: flex;
+}
+.rodape .esquerda-rodape{
+    flex: 1;
+    height: 100%;
+}
+.rodape .direita-rodape{
+    flex: 1;
+    
+}
+.rodape .meio-rodape{
+    display: flex;
+    flex: 1;
+}
+.rodape .meio-rodape li{
+    list-style: none;
+    color: whitesmoke;
+}
+.rodape .meio-rodape li a{
+
+    color: whitesmoke;
 }
