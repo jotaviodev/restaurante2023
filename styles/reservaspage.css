@@ -1,1 +1,22 @@
 @import url(./estr_global.css);
+.botoes{
+    width: 100vw;
+    display: flex;
+}
+.botoes button{
+    height: 20vh;
+    width: 30vw;
+    background-image: url(./imagens/fundobutton.jpg);
+    background-color: #4B0101;
+    cursor: pointer;
+    font-size: larger;
+    border: none;
+    margin-top: 30vh;
+    border-radius: 20px;
+    background-size: 100%;
+    background-clip: content-box;
+    color: whitesmoke;
+}
+.botoes button a{
+    color: whitesmoke;
+}

@@ -1,37 +1,4 @@
-/* Estrutura padrão do site */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-body{
-    background-color: #fd7e09;
-}
-a{
-    text-decoration: none;
-}
-.pag1{
-    height: 100vh;
-}
-.main-menu{
-    height: 10vh;
-}
-.main-menu ul{
-    
-    display: flex;
-    background-color: #4B0101;
-    color: #4B0101 ;
-    height: 10vh;
-}
-.main-menu ul li{
-    margin-top: 3vh;
-    font-size:x-large;
-}
-.main-menu ul li a{
-    color: whitesmoke;
-}
+@import url(estr_global.css);
 .theme{
     margin-top: 10vh;
     background-color: whitesmoke;
