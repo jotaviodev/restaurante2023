@@ -1,0 +1,26 @@
+@import url(estr_global.css);
+.box{
+    background-color: #4B0101;
+    height: 80vh;
+    width: 70vh;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    height: 5vh;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.text h1{
+    color: whitesmoke;
+}
