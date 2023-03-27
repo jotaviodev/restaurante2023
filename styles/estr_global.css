@@ -1,10 +1,10 @@
 /* Estrutura padrão do site */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 * {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Londrina Solid', cursive;
 }
 body{
     background-color: #db8764;
@@ -30,5 +30,32 @@ a{
     font-size:x-large;
 }
 .main-menu ul li a{
+    color: whitesmoke;
+}
+
+.rodape{
+    height: 30vh;
+    background-color: #4B0101;
+    width: 100%;
+    display: flex;
+}
+.rodape .esquerda-rodape{
+    flex: 1;
+    height: 100%;
+}
+.rodape .direita-rodape{
+    flex: 1;
+    
+}
+.rodape .meio-rodape{
+    display: flex;
+    flex: 1;
+}
+.rodape .meio-rodape li{
+    list-style: none;
+    color: whitesmoke;
+}
+.rodape .meio-rodape li a{
+
     color: whitesmoke;
 }

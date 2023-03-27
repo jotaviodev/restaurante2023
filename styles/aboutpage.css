@@ -1,2 +1,33 @@
 /* Estrutura padrão do site */
 @import url(./estr_global.css);
+.subpag1{
+    display: flex;
+    margin-top: 20vh;
+}
+.parteesquerda{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.partedireita{
+    flex: 1;
+}
+.pag2{
+    height: 100vh;
+}
+.subpag2{
+    display: flex;
+    margin-top: 20vh;
+}
+.parteesquerda h1{
+    margin-left: 8vw;
+}
+.partedireita img{
+    margin-left: 5vw;
+    border-radius: 30px;
+}
+.parteesquerda img{
+    border-radius: 30px;
+}
+
+
