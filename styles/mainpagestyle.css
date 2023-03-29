@@ -62,13 +62,13 @@
 }
 .food{
     margin-top: 20vh;
-    background-color: whitesmoke;
-    width: 50vh;
+    background-color: #7200008a ;
+    width: 40vh;
     height: 65vh;
     border-radius: 30px;
 }
 .minbox{
-    width: 40vh;
+    width: 37vh;
     height: 40vh;
     background-color: black;
     margin-top: 5vh;

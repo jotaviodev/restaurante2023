@@ -1,2 +1,56 @@
 /* Estrutura padrão do site */
 @import url(./estr_global.css);
+.pag1{
+    height: 100vh;
+}
+.escopogeral{
+    display: flex;
+}
+.parteesquerda{
+    flex: 1;
+}
+.partedireita{
+    flex: 1;
+}
+.boxcima{
+    margin-top: 3vh ;
+    height: 40vh;
+    width: 30vw;
+    background-color: #72000065;
+    border-radius: 50px;
+}
+.boxbaixo{
+    margin-top: 3vh;
+    height: 40vh;
+    width: 30vw;
+    background-color: #72000065 ;
+    border-radius: 50px;
+}
+
+.pag2{
+    height: 100vh;
+}
+.pag3{
+    height: 100vh;
+}
+.title-page3{
+    font-size: xx-large;
+    border-top: 2vh;
+}
+.foodmaster{
+    display: flex;
+}
+.food{
+    margin-top: 20vh;
+    background-color: #7200008a ;
+    width: 40vh;
+    height: 65vh;
+    border-radius: 30px;
+}
+.minbox{
+    width: 37vh;
+    height: 40vh;
+    background-color: black;
+    margin-top: 5vh;
+    border-radius: 10px ;
+}
