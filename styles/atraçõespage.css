@@ -29,15 +29,19 @@
     font-size: x-large;
 
 }
-.boxcima .agenda{
-    margin-right: 10vw;
+.agenda{
+    margin-right: 17vw;
 }
-.boxbaixo{
+.boxbaixo{  
     margin-top: 3vh;
     height: 40vh;
     width: 30vw;
     background-color: #72000065 ;
     border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: x-large;
 }
 
 .pag2{
