@@ -25,6 +25,13 @@
 .pag2{
     height: 100vh;
 }
+hr{
+    height: 0.4vh;
+    background-color: #4B0101;
+    border: none;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
 .texto{
     border-top: 2vh;
     font-size: xx-large;
@@ -56,6 +63,10 @@
 .title-page3{
     font-size: xx-large;
     border-top: 2vh;
+    margin-left: 3vw;
+}
+.title-page3 h1{
+    color: #4B0101;
 }
 .foodmaster{
     display: flex;
