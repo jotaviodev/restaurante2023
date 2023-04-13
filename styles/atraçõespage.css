@@ -47,8 +47,36 @@
 .pag2{
     height: 100vh;
 }
-.pag3{
-    height: 100vh;
+.pag2 .parteesquerda img{
+    margin-top: 20vh;
+    height: 60vh;
+    width: 80vh;
+}
+.pag2 hr{
+    background-color: #4B0101;
+    border: none;
+    height: 2px;
+    width: 85%;
+}               
+.boxdireita{
+    background-color: #72000065;
+    height: 40vh;
+    width: 30vw;
+    margin-top: 28vh;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.boxdireita hr{
+    width: 80%;
+    background-color: black;
+    border: none;
+    height: 3px;
+}
+.boxdireita h2{
+    color: #4B0101;
 }
 .title-page3{
     font-size: xx-large;
