@@ -1,1 +1,16 @@
 @import url(./estr_global.css);
+.pag1{
+    display: flex;
+}
+.parteesquerda{
+    flex: 1;
+}
+.partedireita{
+    flex: 1;
+    background-color: white;
+}
+.box{
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+}

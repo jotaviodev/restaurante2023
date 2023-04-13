@@ -32,11 +32,13 @@ a{
     color: whitesmoke;
 }
 
+
 .rodape{
     height: 30vh;
     background-color: #4B0101;
     width: 100%;
     display: flex;
+    margin-top: 10vh;
 }
 .rodape .esquerda-rodape{
     flex: 1;
