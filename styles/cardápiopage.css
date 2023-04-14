@@ -1,2 +1,56 @@
 /* Estrutura padrão do site */
 @import url(./estr_global.css);
+.title-page3{
+    font-size: xx-large;
+    border-top: 2vh;
+    margin-left: 3vw;
+}
+hr{
+
+}
+.title-page3 h1{
+    color: #4B0101;
+}
+.foodmaster{
+    display: flex;
+}
+.food{
+    margin-top: 10vh;
+    background-color: #7200008a ;
+    width: 40vh;
+    height: 65vh;
+    border-radius: 30px;
+}
+.minbox{
+    width: 37vh;
+    height: 40vh;
+    background-color: black;
+    margin-top: 5vh;
+    border-radius: 10px ;
+}
+.rodape{
+    height: 30vh;
+    background-color: #4B0101;
+    width: 100%;
+    display: flex;
+}
+.rodape .esquerda-rodape{
+    flex: 1;
+    height: 100%;
+}
+.rodape .direita-rodape{
+    flex: 1;
+    
+}
+.rodape .meio-rodape{
+    display: flex;
+    flex: 1;
+}
+.rodape .meio-rodape li{
+    list-style: none;
+    color: whitesmoke;
+}
+.rodape .meio-rodape li a{
+
+    color: whitesmoke;
+}

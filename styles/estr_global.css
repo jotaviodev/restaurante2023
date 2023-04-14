@@ -31,6 +31,12 @@ a{
 .main-menu ul li a{
     color: whitesmoke;
 }
+.main-menu img{
+    height: 60%;
+    width: 20%;
+    margin-top: 2vh;
+}
+
 
 
 .rodape{
