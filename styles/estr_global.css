@@ -1,7 +1,7 @@
 /* Estrutura padrão do site */
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Londrina Solid', cursive;
@@ -23,6 +23,7 @@ a{
     background-color: #4B0101;
     color: #4B0101 ;
     height: 10vh;
+    justify-content: space-around;
 }
 .main-menu ul li{
     margin-top: 3vh;
@@ -31,10 +32,14 @@ a{
 .main-menu ul li a{
     color: whitesmoke;
 }
-.main-menu img{
+.main-menu a{
     height: 60%;
     width: 20%;
     margin-top: 2vh;
+}
+.main-menu img{
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -49,14 +54,39 @@ a{
 .rodape .esquerda-rodape{
     flex: 1;
     height: 100%;
+    display: flex;
+    justify-content: space-around;
+}       
+.rodape .esquerda-rodape .cimaleft{
+    height: 20%;
+    text-align: center;
+    padding-top: 5%;
+}
+.rodape .esquerda-rodape .baixoleft{
+    flex: 1; 
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 10%;
+}
+.rodape .esquerda-rodape .baixoleft img{
+    height: 100%;
+    width: 100%;
 }
 .rodape .direita-rodape{
+    height: 100%; 
     flex: 1;
-    
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
 }
 .rodape .meio-rodape{
     display: flex;
     flex: 1;
+    justify-content: space-around;
 }
 .rodape .meio-rodape li{
     list-style: none;
@@ -65,4 +95,26 @@ a{
 .rodape .meio-rodape li a{
 
     color: whitesmoke;
+}
+
+
+.foodmaster{
+    display: flex;
+    justify-content: space-around;
+}
+.food{
+    margin-top: 20vh;
+    background-color: #7200008a ;
+    width: 40vh;
+    height: 65vh;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.minbox{
+    width: 37vh;
+    height: 40vh;
+    background-color: black;
+    margin-top: 5vh;
+    border-radius: 10px ;
 }

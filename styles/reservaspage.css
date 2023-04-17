@@ -2,6 +2,7 @@
 .botoes{
     width: 100vw;
     display: flex;
+    justify-content: space-around;
 }
 .botoes button{
     height: 20vh;

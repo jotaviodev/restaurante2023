@@ -1,1 +1,21 @@
 @import url(./estr_global.css);
+.pag1{
+    display: flex;
+}
+.parteesquerda{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parteesquerda .box{
+    height: 70vh;
+    width: 95%;
+    background-color: aliceblue;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.partedireita{
+    flex: 1;
+}

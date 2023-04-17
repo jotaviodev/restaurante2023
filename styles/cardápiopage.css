@@ -11,23 +11,7 @@ hr{
 .title-page3 h1{
     color: #4B0101;
 }
-.foodmaster{
-    display: flex;
-}
-.food{
-    margin-top: 10vh;
-    background-color: #7200008a ;
-    width: 40vh;
-    height: 65vh;
-    border-radius: 30px;
-}
-.minbox{
-    width: 37vh;
-    height: 40vh;
-    background-color: black;
-    margin-top: 5vh;
-    border-radius: 10px ;
-}
+
 .rodape{
     height: 30vh;
     background-color: #4B0101;
