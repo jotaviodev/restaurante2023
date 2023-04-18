@@ -1,4 +1,8 @@
 @import url(./estr_global.css);
+.pag1{
+    display: flex;
+    justify-content: center;
+}
 .form{
     height: 50vh;
     width: 50vh;
@@ -7,11 +11,13 @@
     background-color: aliceblue; 
     margin-top: 12vh;
     border-radius: 20px;
+    align-items: center;
 }
 .form form{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    align-items: center;
 }
 .enviar input{
     width: 12vw;

@@ -1,5 +1,10 @@
 /* Estrutura padrão do site */
 @import url(./estr_global.css);
+.pag1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .formcadastro form{
     height: 80vh;
     width: 80vw;
@@ -8,12 +13,14 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .leftform{
     display: flex;  
     flex-direction: column;
     justify-content: space-around;
     width: 50%;
+    align-items: center         ;
 }
 .leftform input,.rightform input{
     width: 25vw;
@@ -23,6 +30,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 50%;
+    align-items: center;
 }
 
 .topform{
@@ -33,6 +41,8 @@
 }
 .bottomform{
     height: 15%;
+    display: flex;
+    justify-content: center;
 }
 .divsexo{
     display: flex;
@@ -40,5 +50,11 @@
 }
 .divsexo .divsexomasc, .divsexo .divsexofem, .divsexo .outro{
     display: flex;
-    width: 10%;
+    width: 33.3%;
+    height: 30%;
+}
+.formcadastro h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -4,12 +4,20 @@
 }
 .parteesquerda{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.allboxes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .box{
     border: 4px solid black;
     width: 80%;
     display: flex;
-    margin-top: 3vh;
+   
 }
 .imagem img{
     max-width: 15vw;
@@ -21,9 +29,13 @@
 .partedireita{
     flex: 1;
     display: flex;
+    justify-content: center;
 }
 .partedireita img{
     margin-top: 15vh;
     height: 70vh;
     width: 45vw;
+}
+.rodape{
+    margin-top: 20vh;
 }

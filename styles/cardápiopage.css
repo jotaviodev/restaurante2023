@@ -6,7 +6,10 @@
     margin-left: 3vw;
 }
 hr{
-
+    background-color: #4B0101;
+    border: none;
+    height: 2px;
+    width: 100%;
 }
 .title-page3 h1{
     color: #4B0101;
