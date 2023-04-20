@@ -6,7 +6,7 @@ const data = [
         nomeDaMesa: 'mesa 1',
         id: 1,
     },
-    {
+    {               
         status: false,
         nomeDaMesa: 'mesa 2',
         id: 1,

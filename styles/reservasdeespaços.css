@@ -1,35 +1,18 @@
 @import url(estr_global.css);
-.pag1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.maiorbox{
+.container{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: flex;
     width: 100vh;
-    gap: 20px;
-}
-.boxsuperior{
-    flex: 1;
-    display: flex;
-    width: 100%;
-}
-.boxmediana{
-    flex: 1;
-    display: flex;
-    width: 100%;
-}
-.boxinferior{
-    flex: 1;
-    display: flex;
-    width: 100%;
-    
-}
+    height: 25vh;
+    margin-top: 5vh;
+}   
  .parteesquerda{
-    flex: 1;
+    flex: 2;
     background-color: #4b0101ea;
  }
  .partedireita{
