@@ -1,1 +1,43 @@
 @import url(../../styles/estr_global.css);
+.pag1{
+    display: flex;
+}
+button{
+    width: 20vw;
+    height: 20vh;
+    background-color: antiquewhite;
+}
+.parteesquerda{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.partecentral{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.partedireita{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.up{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

@@ -1,0 +1,19 @@
+@import url(./estr_global.css);
+.pag1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form .imagem{
+    flex: 1;
+}
+.form .entrada{
+    flex: 1;
+}
+.form{
+    background-color: aliceblue;
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
