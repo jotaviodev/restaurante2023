@@ -5,3 +5,38 @@
     box-sizing: border-box;
     font-family: 'Londrina Solid', cursive;
 }
+body{
+    background-color: #db8764;
+}
+a{
+    text-decoration: none;
+}
+.pag1{
+    height: 100vh;
+}
+.main-menu{
+    height: 10vh;
+}
+.main-menu ul{
+    display: flex;
+    background-color: #4B0101;
+    color: #4B0101 ;
+    height: 10vh;
+    justify-content: space-around;
+}
+.main-menu ul li{
+    margin-top: 3vh;
+    font-size:x-large;
+}
+.main-menu ul li a{
+    color: whitesmoke;
+}
+.main-menu a{
+    height: 60%;
+    width: 20%;
+    margin-top: 2vh;
+}
+.main-menu img{
+    height: 100%;
+    width: 100%;
+}
