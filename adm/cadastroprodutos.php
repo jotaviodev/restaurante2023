@@ -28,23 +28,26 @@
                 <h1>Inserir</h1>
             </div>
             <div class="form">
-                <form action="">
+                <form action="insertprodutos.php" method="POST">
                     <label for="nomeDoProduto">Nome: </label>
                     <input type="text" name="nomeDoProduto">
                     <label for="ingredientesDoProduto">Ingredientes: </label>
                     <input type="text" name="ingredientesDoProduto">
-                    <label for="preco">Preço: </label>
-                    <input type="number" name="preco">
+                    <label for="precoDoProduto">Preço: </label>
+                    <input type="number" name="precoDoProduto">
                     <label for="tipoDeAlimento">Tipo: </label>
                     <select name="tipoDeAlimento">
-                        <option value="">1</option>
-                        <option value="">1</option>
-                        <option value="">1</option>
-                        <option value="">1</option>
+                        <option value="almocoJantar">Almoço/Jantar</option>
+                        <option value="bebidas">Bebidas</option>
+                        <option value="cafeDaManha">Café Da Manhã</option>
+                        <option value="sobremesas">Sobremesas</option>
+                        <option value="combos">Combos</option>
                     </select>
                     <label for="fotoProduto">URL da foto: </label>
                     <input type="text" name="fotoProduto">
-                    <input type="submit" value="enviar">
+                    <div class="enviar">
+                        <input type="submit" value="enviar">
+                    </div>
                 </form>
             </div>
         </div>
