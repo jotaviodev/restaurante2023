@@ -1,5 +1,5 @@
 <?php
-require("connectdb.php");
+require("../connectdb.php");
     $nomeDoProduto = $_POST['nomeDoProduto'];
     $ingredientesDoProduto = $_POST['ingredientesDoProduto'];
     $precoDoProduto = $_POST['precoDoProduto'];
@@ -11,7 +11,7 @@ require("connectdb.php");
 // Executa a query
 $inserir = $conn->prepare($query);
 $inserir->execute();
-$dados = $inserir->
+
 if ($inserir) {
 echo "Notícia inserida com sucesso!";
 } else {
