@@ -9,8 +9,7 @@ require("../connectdb.php");
     $query = "INSERT INTO produtos VALUES (0,'$nomeDoProduto','$ingredientesDoProduto','$precoDoProduto','$tipoDoAlimento','$fotoProduto')";
 
 // Executa a query
-$inserir = $conn->prepare($query);
-$inserir->execute();
+$inserir = $conn->query($query);
 
 if ($inserir) {
 echo "Notícia inserida com sucesso!";
