@@ -1,4 +1,6 @@
-
+<?php
+require('./readprodutos.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +26,25 @@
         </nav>
     </div>
     <div class="pag1">
-        
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tody>
+                <?php
+                    while($user_data = mysqli_fetch_assoc($read)){
+                        echo"<tr>";
+                        echo "<td>".$user_data['id_produto']."</td>";       
+                    }
+                ?>
+
+            </tbody>
+          </table>
     </div>
 </body>
 </html>
