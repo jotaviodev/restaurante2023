@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Adms</title>
+    <link rel="stylesheet" href="../stylesadm/cadastroadms.css">
+</head>
+<body><div class="main-menu">
+    <nav>
+        <ul>
+            <a href="../index.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../about.html">Sobre nós</a></li>
+            <li><a href="../cardápio.html">Nosso Cardápio</a></li>
+            <li><a href="../reservas.html">Reservas</a></li>
+            <li><a href="../atrações.html">Atrações</a></li>
+            <li><a href="../locais.html">Instalações Físicas</a></li>
+            <li><a href="../perfil.html">Perfil</a></li> 
+        </ul>
+    </nav>
+</div>
+<div class="pag1">
+    <div class="box">
+        <div class="titulo">
+            <h1>Inserir</h1>
+        </div>
+        <div class="form">
+            <form action="insertadms.php" method="POST">
+                <label for="nomeDoAdm">Nome completo: </label>
+                <input type="text" name="nomeDoAdm">
+                <label for="cpfDoAdm">CPF: </label>
+                <input type="text" name="cpfDoAdm">
+                <label for="sexoDoAdm">Sexo: </label>
+                <select name="sexoDoAdm">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="U">Prefiro não dizer</option>
+                </select>
+                <label for="cargoDoAdm">Cargo: </label>
+                <select name="cargoDoAdm">
+                    <option value="atendente">Atendente</option>
+                    <option value="auxiliarDeCozinha">Auxiliar de Cozinha</option>
+                    <option value="Cozinheiro">Cozinheiro</option>
+                    <option value="Faxineiro">Faxineiro</option>
+                    <option value="Garçom">Garçom</option>
+                    <option value="Gerente">Gerente</option>
+                </select>
+                <label for="salarioDoAdm">Salário: </label>
+                <input type="text" name="salarioDoAdm">
+                <label for="emailDoAdm">Email: </label>
+                <input type="text" name="emailDoAdm">
+                <label for="senhaDoAdm">Senha: </label>
+                <input type="password" name="senhaDoAdm">
+                <label for="telefoneDoAdm">Telefone: </label>
+                <input type="number" name="telefoneDoAdm"> 
+                <label for="fotoDoAdm">URL da Foto: </label>
+                <input type="text" name="fotoDoAdm">
+                <div class="enviar">
+                    <input type="submit" value="enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

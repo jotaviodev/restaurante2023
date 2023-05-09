@@ -49,7 +49,44 @@ require('./readprodutos.php');
                         echo "<td>".$data[$contador]['ingredientes_produto']."</td>";
                         echo "<td>".$data[$contador]['preco_produto']."</td>";
                         echo "<td>".$data[$contador]['tipo_produto']."</td>";
-                        echo "<td>".$data[$contador]['foto_produto']."</td>";
+                        echo "<td>".$data[$contad<!DOCTYPE html>
+                        <html lang="pt-br">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Admreservas</title>
+                            <link rel="stylesheet" href="stylesadm/indexcss.css">
+                        </head>
+                        <body>
+                            <div class="main-menu">
+                                <nav>
+                                    <ul>
+                                        <a href="../index.html"><img src="../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                                        <li><a href="../index.html">Início</a></li>
+                                        <li><a href="../about.html">Sobre nós</a></li>
+                                        <li><a href="../cardápio.html">Nosso Cardápio</a></li>
+                                        <li><a href="../reservas.html">Reservas</a></li>
+                                        <li><a href="../atrações.html">Atrações</a></li>
+                                        <li><a href="../locais.html">Instalações Físicas</a></li>
+                                        <li><a href="../perfil.html">Perfil</a></li> 
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="pag1">
+                                <div class="parteesquerda">
+                                    <div class="up">
+                                        <button src="" value="" style="font-size: x-large;">Inserir</button>
+                                    </div>
+                                </div>
+                                <div class="partedireita">
+                                    <div class="up">
+                                        <button src="" value="" style="font-size: x-large;">Consultar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </body>
+                        </html>or]['foto_produto']."</td>";
                         echo "<td>"."Ação"."</td>";
                         $contador++;
                     }
