@@ -1,11 +1,17 @@
-
+<?php
+require("../connectdb.php");
+    $id = $_GET['id'];
+    $read = $conn->query("SELECT * FROM produtos where id_produto ='$id'");
+    $read->execute();
+    $data = $read->fetchAll(); 
+?>       
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+    <title>Cadastro Produtos</title>
     <link rel="stylesheet" href="../stylesadm/cadastroprodutos.css">
 </head>
 <body>
@@ -31,11 +37,11 @@
             <div class="form">
                 <form action="insertprodutos.php" method="POST">
                     <label for="nomeDoProduto">Nome: </label>
-                    <input type="text" name="nomeDoProduto">
+                    <input type="text" name="nomeDoProduto" value="<?php echo($data[0]['nome_produto'])?>">
                     <label for="ingredientesDoProduto">Ingredientes: </label>
-                    <input type="text" name="ingredientesDoProduto">
+                    <input type="text" name="ingredientesDoProduto" value="<?php echo($data[0]['ingredientes_produto'])?>">
                     <label for="precoDoProduto">Preço: </label>
-                    <input type="number" name="precoDoProduto">
+                    <input type="number" name="precoDoProduto" value="<?php echo($data[0]['preco_produto'])?>">
                     <label for="tipoDeAlimento">Tipo: </label>
                     <select name="tipoDeAlimento">
                         <option value="almocoJantar">Almoço/Jantar</option>
@@ -47,7 +53,7 @@
                     <label for="fotoProduto">URL da foto: </label>
                     <input type="text" name="fotoProduto">
                     <div class="enviar">
-                        <input type="submit" value="enviar">
+                        <input type="submit" value="submit" name="submit" id="submit">
                     </div>
                 </form>
             </div>
