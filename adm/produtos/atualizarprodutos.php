@@ -4,6 +4,9 @@ require("../connectdb.php");
     $read = $conn->query("SELECT * FROM produtos where id_produto ='$id'");
     $read->execute();
     $data = $read->fetchAll(); 
+
+    $categorias = array("Almoço/Jantar","Bebidas","Café Da Manhã","Sobremesas","Combos");
+    $bd_categorias = array("almocoJantar","bebidas","cafeDaManha","sobremesas","combos");
 ?>       
 <!DOCTYPE html>
 <html lang="en">
@@ -32,10 +35,12 @@ require("../connectdb.php");
     <div class="pag1">
         <div class="box">
             <div class="titulo">
-                <h1>Inserir</h1>
+                <h1>Atualizar</h1>
             </div>
             <div class="form">
-                <form action="insertprodutos.php" method="POST">
+                <form action="updateprodutos.php" method="POST">
+                    <label for="idDoProduto">ID: </label>
+                    <input type="text" name="idDoProduto" value="<?php echo($id)?>" readonly>
                     <label for="nomeDoProduto">Nome: </label>
                     <input type="text" name="nomeDoProduto" value="<?php echo($data[0]['nome_produto'])?>">
                     <label for="ingredientesDoProduto">Ingredientes: </label>
@@ -43,15 +48,20 @@ require("../connectdb.php");
                     <label for="precoDoProduto">Preço: </label>
                     <input type="number" name="precoDoProduto" value="<?php echo($data[0]['preco_produto'])?>">
                     <label for="tipoDeAlimento">Tipo: </label>
-                    <select name="tipoDeAlimento">
-                        <option value="almocoJantar">Almoço/Jantar</option>
-                        <option value="bebidas">Bebidas</option>
-                        <option value="cafeDaManha">Café Da Manhã</option>
-                        <option value="sobremesas">Sobremesas</option>
-                        <option value="combos">Combos</option>
+                    <select name="tipoDeAlimento" id="">
+                    <?php
+                        foreach ($bd_categorias as $valor) {
+                            if ($valor == $data[0]['tipo_produto'])
+                            echo "<option value='".$valor."'>".$valor."</option>";
+                        }
+                        foreach ($bd_categorias as $valor) {
+                            if ($valor != $data[0]['tipo_produto'])
+                            echo "<option value='".$valor."'>".$valor."</option>";
+                        }
+                    ?>
                     </select>
                     <label for="fotoProduto">URL da foto: </label>
-                    <input type="text" name="fotoProduto">
+                    <input type="text" name="fotoProduto" value="<?php echo($data[0]['foto_produto'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
