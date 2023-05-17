@@ -3,7 +3,7 @@
     $id = $_POST['idDoProduto'];
     $nomeDoProduto = $_POST['nomeDoProduto'];
     $ingredientesDoProduto = $_POST['ingredientesDoProduto'];
-    $precoDoProduto = $_POST['precoDoProduto'];
+    $precoDoProduto = (double)str_replace(",",".",$_POST['precoDoProduto']);
     $tipoDoAlimento = $_POST['tipoDeAlimento'];
     $fotoProduto = $_POST['fotoProduto'];
 

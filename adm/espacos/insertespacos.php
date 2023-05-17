@@ -1,7 +1,7 @@
 <?php
     require('../connectdb.php');
     $nomeEspaco = $_POST['nomeEspaco'];
-    $precoEspaco = $_POST['precoEspaco'];
+    $precoEspaco =(double)str_replace(",",".",$_POST['precoDoProduto']);
     $descEspaco = $_POST['descEspaco'];
     $fotoEspaco = $_POST['fotoEspaco'];
 
