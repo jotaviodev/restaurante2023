@@ -1,15 +1,11 @@
 <?php
-    require("../connectdb.php");    
-    $idDoProduto = $_POST['idDoProduto'];
+    require("../connectdb.php");
+    $id = $_GET['id'];
 
-    $query="DELETE FROM produtos WHERE id_produto='$idDoProduto'";    
-
-    $deletar = $conn->prepare($query);
+    $query = "DELETE FROM produtos where id_produto = '$id' ";
+    $deletar = $conn->query($query);
     $deletar->execute();
-        if ($deletar) {
-            echo "Produto deletado com sucesso!";
-            } else {
-            echo "Não foi possível deletar o produto, tente novamente.";
-            echo "Dados sobre o erro:" . mysql_error();
-            }
+
+    header ("location: lerprodutos.php");
 ?>
+

@@ -12,11 +12,15 @@ form.addEventListener("submit",(w)=>{
 })
 
 
+let inValue = ""
 preco.addEventListener('keyup',(e)=>{
     console.log(e);
-    if (e.keyCode >= 48 && e.keyCode <= 57) {
-        preco.value += e.key
+    if (e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode == 8 || e.keyCode == 190 || e.keyCode == 188 || e.keyCode >= 96 && e.keyCode <= 105) {
+        inValue = preco.value
+        preco.value = inValue;
     } else {
-        preco.value = ""
+        preco.value = inValue
     }
 })
+
+preco.addEventListener("input", (e) => e.preventDefault())
