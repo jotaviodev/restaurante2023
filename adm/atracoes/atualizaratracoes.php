@@ -43,7 +43,7 @@ require("../connectdb.php");
                     <label for="data_atracao">Data: </label>
                     <input type="date" name="data_atracao" value="<?php echo($data[0]['data_atracao'])?>">
                     <label for="descricao_atracao">Descrição: </label>
-                    <input type="text" name="descricao_atracao" value="<?php echo($data[0]['preco_atracao'])?>">
+                    <input type="text" name="descricao_atracao" value="<?php echo($data[0]['descricao_atracao'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
