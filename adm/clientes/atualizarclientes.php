@@ -4,6 +4,8 @@ require("../connectdb.php");
     $read = $conn->query("SELECT * FROM cliente where id_cliente ='$id'");
     $read->execute();
     $data = $read->fetchAll(); 
+
+    $bd_generos = array('M','F','U');
 ?>       
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +43,18 @@ require("../connectdb.php");
                     <label for="nome_cliente">Nome: </label>
                     <input type="text" name="nome_cliente" value="<?php echo($data[0]['nome_cliente'])?>">
                     <label for="sexo_cliente">Sexo: </label>
-                    <input type="text" name="sexo_cliente" value="<?php echo($data[0]['sexo_cliente'])?>">
+                    <select name="sexo_cliente">
+                    <?php
+                        foreach ($bd_generos as $valor) {
+                            if ($valor == $data[0]['tipo_produto'])
+                            echo "<option value='".$valor."'>".$valor."</option>";
+                        }
+                        foreach ($bd_generos as $valor) {
+                            if ($valor != $data[0]['tipo_produto'])
+                            echo "<option value='".$valor."'>".$valor."</option>";
+                        }
+                    ?>
+                    </select>
                     <label for="email_cliente">Email: </label>
                     <input type="text" name="email_cliente" value="<?php echo($data[0]['email_cliente'])?>">
                     <label for="senha_cliente">Senha: </label>

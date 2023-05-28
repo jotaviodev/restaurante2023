@@ -1,3 +1,4 @@
+/* Estrutura padrão do site */
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
 * {
     margin: 0;
@@ -16,20 +17,27 @@ a{
 }
 .main-menu{
     height: 10vh;
+    width: 100%;
+}
+.menu{
+    width: 30%;
+    height: 100%;
 }
 .main-menu ul{
     display: flex;
-    background-color: #4B0101;
-    color: #4B0101 ;
+    background-color: #6c0202d2;
+    color: #6c0202d2 ;
     height: 10vh;
     justify-content: space-around;
+    list-style: none;
 }
+
 .main-menu ul li{
     margin-top: 3vh;
     font-size:x-large;
 }
 .main-menu ul li a{
-    color: whitesmoke;
+    color: black;
 }
 .main-menu a{
     height: 60%;
@@ -37,6 +45,97 @@ a{
     margin-top: 2vh;
 }
 .main-menu img{
+    height: 60%;
+    width: 60%;
+    margin-top: 2vh;
+}
+
+
+
+.rodape{
+    height: 30vh;
+    background-color: #4B0101;
+    width: 100%;
+    display: flex;
+    margin-top: 10vh;
+}
+.rodape .esquerda-rodape{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}       
+.esquerda-rodape .titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.esquerda-rodape .titulo h1{
+    color: aliceblue;
+}
+.esquerda-rodape .imagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20%;
+}
+.esquerda-rodape a{
+   height: 10vh;
+   width: 5vw;
+}
+.esquerda-rodape img{
     height: 100%;
     width: 100%;
+}
+
+.baixoleft{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.rodape .direita-rodape{
+    height: 100%; 
+    flex: 1;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+}
+.rodape .meio-rodape{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+.rodape .meio-rodape li{
+    list-style: none;
+    color: whitesmoke;
+}
+.rodape .meio-rodape li a{
+
+    color: whitesmoke;
+}
+
+
+.foodmaster{
+    display: flex;
+    justify-content: space-around;
+}
+.food{
+    margin-top: 20vh;
+    background-color: #7200008a ;
+    width: 40vh;
+    height: 65vh;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.minbox{
+    width: 37vh;
+    height: 40vh;
+    background-color: black;
+    margin-top: 5vh;
+    border-radius: 10px ;
 }

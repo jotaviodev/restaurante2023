@@ -1,9 +1,15 @@
+<?php
+    require("./adm/readForMesas.php");
+    
+?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login/Cadastro</title>
-    <link rel="stylesheet" href="styles/loginpage.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas de Mesa</title>
+    <link rel="stylesheet" href="styles/reservasdemesas.css">
 </head>
 <body>
     <div class="main-menu">
@@ -23,22 +29,21 @@
         </nav>
     </div>
     <div class="pag1">
-    <div class="form">
-        <h3>Login</h3>
-        <form action="" style="width: 50vh; height: 50vh;">
-            <div class="email">
-                <label for="Email">Email: </label>
-                <input type="email" name="Email" id="Email"style="height: 5vh; width: 100%;"><br>
-            </div>
-            <div class="senha">
-                <label for="senha">Senha: </label>
-                <input type="password" style="height: 5vh; width: 100%;"><br>
-            </div>
-            <a href="./cadastrousuarios.html">Não sou cadastrado</a><br>
-            <div class="enviar">
-            <input type="submit" value="Login"style="cursor: pointer;"></form>
-            </div>
-        </form>
+        <?php
+            for ($i = 0; $i < count($data); $i++) {
+                echo "<div class='container-table'>".
+                        "<div class='image-table'></div>".
+                        "<div class='table-data'>".
+                        "<h1>Mesa: ".$data[$i]['nome_mesa']."</h1>".
+                        "<h3>Preço: ".$data[$i]['preco_mesa']." R$/h</h3>".
+                        "<h3>Capacidade : ".$data[$i]['capacidade_mesa']." pessoas</h3>".
+                        "<h3>Descrição: ".$data[$i]['descricao_mesa']."</h3>".
+                        "</div>".
+                        "<a href='./formreservasdemesa.php?id=".$data[$i]['id_mesa']."'><button>Reservar</button></a>". 
+                    "</div>";
+            }
+        ?>
     </div>
+    
 </body>
 </html>
