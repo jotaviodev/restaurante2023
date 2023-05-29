@@ -1,10 +1,13 @@
 <?php
+    require("./adm/validationlog.php");
     require("./adm/connectdb.php");
     $read = $conn->query('SELECT * FROM reservamesa ORDER BY id_reservamesa asc');
     $read->execute();
     $data = $read->fetchAll(); 
     if(isset($_POST['data_reservamesa'])){
-        session_start();
+        if(!$_SESSION){
+            session_start();
+        }
         require("./adm/login.php");
         require('./adm/connectdb.php');
             $id_mesa = $_GET['id'];
@@ -36,7 +39,7 @@
                         }
                 }
             }else{
-                echo "<script>alert('Data inválida!')</script>";
+                echo "<script>alert('Data inválida! As reservas são referentes apenas ao ano atual.')</script>";
             }
     }
 ?>

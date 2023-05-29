@@ -1,6 +1,5 @@
 <?php
     require("./adm/readForMesas.php");
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">

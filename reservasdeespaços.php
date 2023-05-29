@@ -1,11 +1,15 @@
+<?php
+    require("./adm/readForMesas.php");
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas De Espaços</title>
-    <link rel="stylesheet" href="styles/reservasdeespaços.css">
+    <title>Reservas de Mesa</title>
+    <link rel="stylesheet" href="styles/reservasdemesas.css">
 </head>
 <body>
     <div class="main-menu">
@@ -24,9 +28,22 @@
             </ul>
         </nav>
     </div>
-    <div class="container">
-        
-    </div> 
-    <script src="./scripts/reservadeespacos.js"></script>
+    <div class="pag1">
+        <?php
+            for ($i = 0; $i < count($data); $i++) {
+                echo "<div class='container-table'>".
+                        "<div class='image-table'></div>".
+                        "<div class='table-data'>".
+                        "<h1>Mesa: ".$data[$i]['nome_mesa']."</h1>".
+                        "<h3>Preço: ".$data[$i]['preco_mesa']." R$/h</h3>".
+                        "<h3>Capacidade : ".$data[$i]['capacidade_mesa']." pessoas</h3>".
+                        "<h3>Descrição: ".$data[$i]['descricao_mesa']."</h3>".
+                        "</div>".
+                        "<a href='./formreservasdemesa.php?id=".$data[$i]['id_mesa']."'><button>Reservar</button></a>". 
+                    "</div>";
+            }
+        ?>
+    </div>
+    
 </body>
 </html>

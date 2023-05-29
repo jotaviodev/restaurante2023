@@ -1,13 +1,12 @@
 <?php
-    require('connectdb.php');
+    require('./adm/connectdb.php');
     if(isset($_POST['email']) || isset($_POST['Senha'])){
         $email = $_POST['email'];
         $senha = $_POST['senha'];
-    
         $query = "SELECT * FROM cliente WHERE email_cliente = '$email' and senha_cliente = '$senha'";
-        $userData = $conn->query($query);
+        $userData = $conn->prepare($query);
         $userData->execute();
-        $quantidade = $userData->fetchColumn();
+        $quantidade = count($userData);
         if($quantidade == 0){
             echo "<script>alert('Email ou Senha incorretos')</script>";
         }else if($quantidade == 1){
@@ -24,6 +23,7 @@
             $_SESSION['telefone'] = $userData[0][5];
             $_SESSION['foto'] = $userData[0][6];
             
+            echo"<script>alert('Login concluído com sucesso!')</script>";
            header("location: index.html");
         }
     }
