@@ -1,11 +1,14 @@
+<?php
+    require("./adm/validationlog.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas De Espaços</title>
-    <link rel="stylesheet" href="styles/reservasdeespaços.css">
+    <title>Perfil do usuário</title>
+    <link rel="stylesheet" href="styles/perfil.css">
 </head>
 <body>
     <div class="main-menu">
@@ -20,13 +23,31 @@
                 <li><a href="./reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
                 <li><a href="./atrações.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
                 <li><a href="./locais.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Instalações Físicas</a></li>
-                <li><a href="./perfil.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Perfil</a></li> 
+                <li><a href="./perfil.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Perfil</a></li> 
             </ul>
         </nav>
     </div>
-    <div class="container">
-        
-    </div> 
-    <script src="./scripts/reservadeespacos.js"></script>
+    <div class="pag1">
+        <div class="parteesquerda">
+            <div class="box">
+                <h1>Nome Completo: </h1>
+                <h1>Email: </h1>
+                <h1>Senha: </h1>
+                <h1>Senha: </h1>
+                <h1>Data de nascimento: </h1>
+                <h1>Contato(Num de Telefone): </h1>
+            </div>
+        </div>
+        <div class="partedireita">
+            <div class="boxgeral">
+                <div class="nomedocliente">
+                    <h1>Nome do Usuário</h1>
+                </div>
+                <div class="fotodocliente">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

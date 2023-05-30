@@ -1,29 +1,29 @@
 <?php
     require("./adm/validationlog.php"); 
     require("./adm/connectdb.php");
-    $read = $conn->query('SELECT * FROM reservamesa ORDER BY id_reservamesa asc');
+    $read = $conn->query('SELECT * FROM reservaespaco ORDER BY id_reservaespaco asc');
     $read->execute();
     $data = $read->fetchAll(); 
-    if(isset($_POST['data_reservamesa'])){
+    if(isset($_POST['data_reservaespaco'])){
         if(!$_SESSION){
             session_start();
         }
         require("./adm/login.php");
         require('./adm/connectdb.php');
-            $id_mesa = $_GET['id'];
+            $id_espaco = $_GET['id'];
             $id_clientereserva = $_SESSION['id'];
-            $data_reservamesa = $_POST['data_reservamesa'];
+            $data_reservaespaco = $_POST['data_reservaespaco'];
 
             $dataatual = date('Y/m/d');
-            $anoRecebidoPeloInput = explode('-',$data_reservamesa);
+            $anoRecebidoPeloInput = explode('-',$data_reservaespaco);
             
             
             $horario_reserva = $_POST['horario_reserva'];
             $insertflag = true;
             
-            if(strtotime($dataatual) <= strtotime($data_reservamesa) && strcmp(date('Y'),$anoRecebidoPeloInput[0]) == 0){
+            if(strtotime($dataatual) <= strtotime($data_reservaespaco) && strcmp(date('Y'),$anoRecebidoPeloInput[0]) == 0){
                 foreach($data as $consulta){
-                    if($consulta[3] == $data_reservamesa && $consulta[4] == $horario_reserva){
+                    if($consulta[3] == $data_reservaespaco && $consulta[4] == $horario_reserva){
                         $insertflag = false;
                         break;
                     }
@@ -31,7 +31,7 @@
                 if($insertflag == false){
                     echo "<script>alert('Horário já reservado!')</script>";
                 }else{
-                    $query = "INSERT INTO reservamesa VALUES (0,'$id_clientereserva','$id_mesa','$data_reservamesa','$horario_reserva')";
+                    $query = "INSERT INTO reservaespaco VALUES (0,'$id_clientereserva','$id_espaco','$data_reservaespaco','$horario_reserva')";
                         $inserir = $conn->prepare($query);
                         $inserir->execute();
                         if ($inserir) {
@@ -39,7 +39,7 @@
                         }
                 }
             }else{
-                echo "<script>alert('Data inválida!')</script>";
+                echo "<script>alert('Data inválida! As reservas só estão disponíveis para o ano atual.')</script>";
             }
     }
 ?>
@@ -56,13 +56,13 @@
     <div class="main-menu">
         <nav>
             <ul>
-                <a href="../index.html"><img src="./imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="../about.html">Sobre nós</a></li>
-                <li><a href="../cardápio.html">Nosso Cardápio</a></li>
-                <li><a href="../reservas.html">Reservas</a></li>
-                <li><a href="../atrações.html">Atrações</a></li>
-                <li><a href="../locais.html">Instalações Físicas</a></li>
+                <a href="./index.html"><img src="./imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./about.html">Sobre nós</a></li>
+                <li><a href="./cardápio.html">Nosso Cardápio</a></li>
+                <li><a href="./reservas.html">Reservas</a></li>
+                <li><a href="./atrações.html">Atrações</a></li>
+                <li><a href="./locais.html">Instalações Físicas</a></li>
                 <li><a href="./perfil.php">Perfil</a></li> 
             </ul>
         </nav>
@@ -74,8 +74,8 @@
             </div>
             <div class="form">
                 <form action='' method="POST">
-                    <label for="data_reservamesa">Data: </label>
-                    <input type="date" name="data_reservamesa" id="data_reservamesa">
+                    <label for="data_reservaespaco">Data: </label>
+                    <input type="date" name="data_reservaespaco" id="data_reservaespaco">
                     <label for="horario_reserva">Horario: </label>
                     <select name="horario_reserva" id="">
                         <option value="11a12">11:00-12:00</option>

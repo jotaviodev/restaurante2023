@@ -4,6 +4,6 @@
     }
     if(!isset($_SESSION['id'])){
         echo "<script>alert('Você precisa estar logado para completar essa ação')</script>";
-        header("location: login.php");
+        header("location: ./login.php");
     }
 ?>
