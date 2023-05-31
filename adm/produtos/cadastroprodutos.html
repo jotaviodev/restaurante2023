@@ -28,7 +28,7 @@
                 <h1>Inserir</h1>
             </div>
             <div class="form">
-                <form action="insertprodutos.php" method="POST">
+                <form action="insertprodutos.php" method="POST" enctype="multipart/form-data">
                     <label for="nomeDoProduto">Nome: </label>
                     <input type="text" name="nomeDoProduto" id="nomeDoProduto">
                     <label for="ingredientesDoProduto">Ingredientes: </label>
@@ -44,7 +44,7 @@
                         <option value="combos">Combos</option>
                     </select>
                     <label for="fotoProduto">URL da foto: </label>
-                    <input type="text" name="fotoProduto" id="fotoProduto">
+                    <input type="file" name="fotoProduto" id="fotoProduto">
                     <div class="enviar">
                         <input type="submit" value="enviar">
                     </div>
