@@ -10,6 +10,12 @@ require('./readprodutos.php');
     <title>Lista de Produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../stylesadm/readprodutos.css">
+    <style>
+        img{
+            width: 50px;
+            height:50px;
+        }
+    </style>
 </head>
 <body>
     <div class="main-menu">
@@ -50,7 +56,7 @@ require('./readprodutos.php');
                         echo "<td>".$data[$contador]['ingredientes_produto']."</td>";
                         echo "<td>".$data[$contador]['preco_produto']."</td>";
                         echo "<td>".$data[$contador]['tipo_produto']."</td>";
-                        echo "<td>".$data[$contador]['foto_produto']."</td>";
+                        echo "<td><img src='data:image/jpeg;base64,".$data[$contador]['foto_produto']."'></td>";
                         echo "<td>".
                             "<a class='btn btn-sm btn-primary' href='atualizarprodutos.php?id=".$data[$contador]['id_produto']."'>".
                             "<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>".

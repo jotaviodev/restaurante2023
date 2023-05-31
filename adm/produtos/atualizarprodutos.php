@@ -61,7 +61,7 @@ require("../connectdb.php");
                     ?>
                     </select>
                     <label for="fotoProduto">URL da foto: </label>
-                    <input type="text" name="fotoProduto" value="<?php echo($data[0]['foto_produto'])?>">
+                    <input type="file" name="fotoProduto" value="<?php $data[0]['foto_produto'] ?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
