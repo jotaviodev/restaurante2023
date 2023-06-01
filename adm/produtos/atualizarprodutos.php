@@ -38,7 +38,7 @@ require("../connectdb.php");
                 <h1>Atualizar</h1>
             </div>
             <div class="form">
-                <form action="updateprodutos.php" method="POST">
+                <form action="updateprodutos.php" method="POST" enctype="multipart/form-data">
                     <label for="idDoProduto">ID: </label>
                     <input type="text" name="idDoProduto" value="<?php echo($id)?>" readonly>
                     <label for="nomeDoProduto">Nome: </label>
@@ -61,7 +61,7 @@ require("../connectdb.php");
                     ?>
                     </select>
                     <label for="fotoProduto">URL da foto: </label>
-                    <input type="file" name="fotoProduto" value="<?php $data[0]['foto_produto'] ?>">
+                    <input type="file" name="fotoProduto" >
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
