@@ -1,5 +1,10 @@
 <?php
 require('./readReservasEspacos.php');
+$queryNomeCliente = "SELECT cliente.nome_cliente FROM reservaespaco INNER JOIN cliente ON cliente.id_cliente = reservaespaco.id_clientereserva;";
+$queryNomeCliente = $conn->query($queryNomeCliente);
+$queryNomeCliente->execute();
+$dataNomeCliente = $queryNomeCliente->fetchAll();
+print_r($dataNomeCliente);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +50,7 @@ require('./readReservasEspacos.php');
                     while($contador < count($data)){
                         echo "<tr>";
                         echo "<td>".$data[$contador]['id_reservaespaco']."</td>";
-                        echo "<td> <a href='../clientes/lerclientes.php'>".$data[$contador]['id_clientereserva']."</td>";
+                        echo "<td> <a href='./defaultcliente.php?id=".$data[$contador]['id_clientereserva']."'>".$dataNomeCliente[$contador][0]."</td>";
                         echo "<td> <a href='../espacos/lerespacos.php'>".$data[$contador]['id_espaco']."</td>";
                         echo "<td>".$data[$contador]['data_reservaespaco']."</td>";
                         echo "<td>".$data[$contador]['horario_reserva']."</td>";
