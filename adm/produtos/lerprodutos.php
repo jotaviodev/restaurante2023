@@ -1,5 +1,6 @@
 <?php
 require('./readprodutos.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -122,23 +122,25 @@ x{
     color: whitesmoke;
 }
 
-
 .foodmaster{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
 }
 .food{
     margin-top: 20vh;
     background-color: #7200008a ;
     width: 40vh;
-    height: 65vh;
+    height: 40vh;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .minbox{
     width: 37vh;
-    height: 40vh;
     background-color: black;
     margin-top: 5vh;
     border-radius: 10px ;

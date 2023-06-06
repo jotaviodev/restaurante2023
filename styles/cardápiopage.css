@@ -1,9 +1,15 @@
 /* Estrutura padrão do site */
-@import url(./estr_global.css);
+@import url("./estr_global.css");
+
 .title-page3{
     font-size: xx-large;
     border-top: 2vh;
     margin-left: 3vw;
+}
+.foodmaster{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 hr{
     background-color: #4B0101;
@@ -39,5 +45,25 @@ hr{
 }
 .rodape .meio-rodape li a{
 
+    color: whitesmoke;
+}
+
+.minbox img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.foodmaster{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr ;
+    align-items: center;
+    justify-items: center;
+}
+.name-price{
+    display: flex;
+}
+.foodmaster h1,h2{
     color: whitesmoke;
 }
