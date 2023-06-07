@@ -1,6 +1,7 @@
 /* Estrutura padrão do site */
 @import url("./estr_global.css");
 
+
 .title-page3{
     font-size: xx-large;
     border-top: 2vh;
@@ -64,6 +65,7 @@ hr{
 .name-price{
     display: flex;
 }
-.foodmaster h1,h2{
+.foodmaster h1,h2,h3{
     color: whitesmoke;
+    font-size: revert;
 }
