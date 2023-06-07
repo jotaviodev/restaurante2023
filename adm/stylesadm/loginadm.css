@@ -1,33 +1,25 @@
-@import url(./estr_globaladm.css);
-body{
-    background-color: #720000ed;
-}
-.page{
-    height: 100vh;
+@import url(../stylesadm/estr_globaladm.css);
+.pag1{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.box{
-    height: 70vh;
-    width: 70vh;
-    background-color: red;
+.form{
+    height: 50vh;
+    width: 50vh;
     display: flex;
     flex-direction: column;
+    background-color: aliceblue; 
+    margin-top: 12vh;
+    border-radius: 20px;
     align-items: center;
 }
-.box form{
+.form form{
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
 }
-.box input{
+.enviar input{
+    width: 12vw;
     height: 5vh;
-    width: 30vw;
-    border: 2px solid black;
-}
-.box img{
-    width: 60%;
-    height: 10%;
 }

@@ -17,20 +17,21 @@ $data = $query->fetchAll();
     <link rel="stylesheet" href="../stylesadm/readprodutos.css">
 </head>
 <body>
-    <div class="main-menu">
+<div class="main-menu">
         <nav>
             <ul>
-                <a href="../index.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="../about.html">Sobre nós</a></li>
-                <li><a href="../cardápio.html">Nosso Cardápio</a></li>
-                <li><a href="../reservas.html">Reservas</a></li>
-                <li><a href="../atrações.html">Atrações</a></li>
-                <li><a href="../locais.html">Instalações Físicas</a></li>
-                <li><a href="../perfil.html">Perfil</a></li> 
+                <div class="menu">
+                    <a href="../indexadm.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                </div>
+                <li><a href="../indexprodutos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
+                <li><a href="../mesasEspacos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
+                <li><a href="../reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
+                <li><a href="../admatracoes.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
+                <li><a href="../admusuarios.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
+
             </ul>
         </nav>
-    </div>
+    </div> 
     <div class="pag1">
     <div class="m-5">
         <table class="table bg-info-subtle">
