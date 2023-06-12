@@ -9,9 +9,9 @@
     justify-content: center;
 }
 .parteesquerda .box{
-    height: 70vh;
-    width: 95%;
-    background-color: aliceblue;
+    height: 50vh;
+    width: 85%;
+    background-color: #6c0202d2;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -24,9 +24,9 @@
     justify-content: center;
 }
 .partedireita .boxgeral{
-    background-color: brown;
+    background-color: orange;
     height: 80vh;
-    width: 95%;
+    width: 85%;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
@@ -38,12 +38,41 @@
     display: flex;
     justify-content: center;
     font-size: x-large;
+    align-items: center;
 }
 .partedireita .fotodocliente{
-    height: 80%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
     background-color: antiquewhite;
-    border-radius: 100%;
-
+    border-radius: 100px;
 }
-
+.fotodocliente img{
+    width: 100%;
+    height: 100%;
+}
+.partedireita .logout{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout button{
+    width: 10vw;
+    height: 7vh;
+    border: none;
+    background-color: whitesmoke;
+}
+.edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.edit button{
+    height: 5vh;
+    width: 10vw;
+    border: none;
+    background-color: whitesmoke;
+}
+h1{
+    color: whitesmoke;
+}

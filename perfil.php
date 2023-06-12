@@ -1,5 +1,15 @@
 <?php
     require("./adm/validationlog.php");
+    $digitsOfPassword = strlen($_SESSION['senha']);
+    $frontPassword = "";    
+    for($i = 0; $i<$digitsOfPassword;$i++){
+        $frontPassword = $frontPassword."*";
+    }
+    if(ctype_xdigit(bin2hex($_SESSION['foto']))){
+        $base64image = base64_encode($_SESSION['foto']);
+        $d['foto_produto'] = $base64image;
+    }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,21 +40,34 @@
     <div class="pag1">
         <div class="parteesquerda">
             <div class="box">
-                <h1>Nome Completo: </h1>
-                <h1>Email: </h1>
-                <h1>Senha: </h1>
-                <h1>Senha: </h1>
-                <h1>Data de nascimento: </h1>
-                <h1>Contato(Num de Telefone): </h1>
+                <?php echo "<h1>Nome Completo: ".$_SESSION['nome']."<h1>"?>
+                <?php echo "<h1>Email: ".$_SESSION['email']."<h1>"?>
+                <?php echo "<h1>Senha:".$frontPassword."</h1>";?>
+                <?php
+                if($_SESSION['sexo'] == "M"){
+                    echo "<h1>Sexo: Masculino<h1>";
+                }else if($_SESSION['sexo'] == "F"){
+                    echo "<h1>Sexo: Feminino<h1>";
+                }else{
+                    echo "<h1>Sexo: Indefinido<h1>";
+                }
+                 ?>
+                <?php echo "<h1>Contato (Num.telefone ): ".$_SESSION['telefone']."<h1>"?>
+                <div class="edit">
+                    <button>Editar</button>
+                </div>
             </div>
         </div>
         <div class="partedireita">
             <div class="boxgeral">
                 <div class="nomedocliente">
-                    <h1>Nome do Usuário</h1>
+                    <?php echo "<h1>".$_SESSION['nome']."<h1>"?>
                 </div>
                 <div class="fotodocliente">
-
+                <?php echo "<td><img src='data:image/jpeg;base64,".$d['foto_produto']."'></td>";?>
+                </div>
+                <div class="logout">
+                    <button>Log-out</button>
                 </div>
             </div>
         </div>

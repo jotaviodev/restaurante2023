@@ -41,3 +41,18 @@ button{
     align-items: center;
     
 }
+h1{
+    color: whitesmoke;
+    font-size:2dvi
+}
+.title{
+    margin-top: 10px;
+    background-color: #6c0202d2;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid black;
+}

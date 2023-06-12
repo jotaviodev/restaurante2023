@@ -31,7 +31,7 @@
                 <h1>Cadastro de Usuário</h1>
             </div>
             <div class="form">
-                <form action="./adm/clientes/insertclientes.php" method="POST">
+                <form action="./adm/clientes/insertclientes.php" method="POST" enctype="multipart/form-data">
                     <label for="nome_usuario">Nome completo: </label>
                     <input type="text" name="nome_usuario">
                     <label for="sexo_usuario">Sexo: </label>
@@ -47,7 +47,7 @@
                     <label for="telefone_usuario">Telefone: </label>
                     <input type="number" name="telefone_usuario"> 
                     <label for="foto_usuario">URL da Foto: </label>
-                    <input type="text" name="foto_usuario">
+                    <input type="file" name="foto_usuario">
                     <div class="enviar">
                         <input type="submit" value="enviar">
                     </div>
