@@ -54,7 +54,7 @@
                  ?>
                 <?php echo "<h1>Contato (Num.telefone ): ".$_SESSION['telefone']."<h1>"?>
                 <div class="edit">
-                    <button>Editar</button>
+                    <a href="./atualizardados.php"><button style="cursor:pointer;">Editar</button></a>
                 </div>
             </div>
         </div>

@@ -53,7 +53,7 @@ require('./readclientes.php');
                         echo "<td>".$data[$contador]['email_cliente']."</td>";
                         echo "<td>".$data[$contador]['senha_cliente']."</td>";
                         echo "<td>".$data[$contador]['telefone_cliente']."</td>";
-                        echo "<td>".$data[$contador]['foto_cliente']."</td>";
+                        echo "<td><img src='data:image/jpeg;base64,".$data[$contador]['foto_cliente']."'></td>";
                         echo "<td>".
                             "<a class='btn btn-sm btn-primary' href='atualizarclientes.php?id=".$data[$contador]['id_cliente']."'>".
                             "<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>".

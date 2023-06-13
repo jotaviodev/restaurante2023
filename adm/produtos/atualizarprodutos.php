@@ -3,10 +3,28 @@ require("../connectdb.php");
     $id = $_GET['id'];
     $read = $conn->query("SELECT * FROM produtos where id_produto ='$id'");
     $read->execute();
-    $data = $read->fetchAll(); 
+    $dados = $read->fetchAll(); 
+    $data = [];
+    
+    foreach($dados as $d){
+        if(ctype_xdigit(bin2hex($d['foto_produto']))){
+            $base64image = base64_encode($d['foto_produto']);
+            $d['foto_produto'] = $base64image;
+        }
+        $data[] = [
+            "id_produto"=>$d['id_produto'],
+            "nome_produto"=>$d['nome_produto'],
+            "ingredientes_produto"=>$d['ingredientes_produto'],
+            "preco_produto"=>$d['preco_produto'],
+            "tipo_produto"=>$d['tipo_produto'],
+            "foto_produto"=>$d['foto_produto'], 
+        ];
+
+    }
 
     $categorias = array("Almoço/Jantar","Bebidas","Café Da Manhã","Sobremesas","Combos");
     $bd_categorias = array("almocoJantar","bebidas","cafeDaManha","sobremesas","combos");
+    
 ?>       
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +34,28 @@ require("../connectdb.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Produtos</title>
     <link rel="stylesheet" href="../stylesadm/cadastroprodutos.css">
+    <script>
+        function GetFile(file){
+                 var byteCharacters = atob(file);
+                 var byteArrays = [];
+                 for (var offset = 0; offset < byteCharacters.length; offset += 1024) {
+                 var slice = byteCharacters.slice(offset, offset + 1024);
+                
+                 var byteNumbers = new Array(slice.length);
+                 for (var i = 0; i < slice.length; i++) {
+                     byteNumbers[i] = slice.charCodeAt(i);
+                 }
+                
+                 var byteArray = new Uint8Array(byteNumbers);
+                 byteArrays.push(byteArray);
+                 }
+                
+                 var blob = new Blob(byteArrays, { type: 'image/jpeg' });
+
+                 return blob;
+             }
+    </script>
+
 </head>
 <body>
 <div class="main-menu">
@@ -62,13 +102,53 @@ require("../connectdb.php");
                     ?>
                     </select>
                     <label for="fotoProduto">URL da foto: </label>
-                    <input type="file" name="fotoProduto">
+                    <?php
+                        echo "<input type='text'value='".$data["foto_produto"]."' >"
+                    ?>
                     <div class="enviar">
+                        <input type='file' id='photo' name='fotoProduto' >
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+
+    <script>
+        let photo = document.getElementById("photo");
+        
+        //console.log(a)  
+
+        // photo.addEventListener("change", (e)=>{
+            
+           
+        //    e.target.files[0] = GetFile(e.target.files[0]);
+        
+        //     function GetFile(file){
+        //         var byteCharacters = atob(file);
+        //         var byteArrays = [];
+        //         for (var offset = 0; offset < byteCharacters.length; offset += 1024) {
+        //         var slice = byteCharacters.slice(offset, offset + 1024);
+                
+        //         var byteNumbers = new Array(slice.length);
+        //         for (var i = 0; i < slice.length; i++) {
+        //             byteNumbers[i] = slice.charCodeAt(i);
+        //         }
+                
+        //         var byteArray = new Uint8Array(byteNumbers);
+        //         byteArrays.push(byteArray);
+        //         }
+                
+        //         var blob = new Blob(byteArrays, { type: 'image/jpeg' });
+
+        //         return blob;
+        //     }
+
+            
+        // })
+       
+   
+    </script>
 </body>
 </html>

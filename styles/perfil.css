@@ -43,12 +43,12 @@
 .partedireita .fotodocliente{
     height: 60%;
     width: 60%;
-    background-color: antiquewhite;
-    border-radius: 100px;
+    border-radius: 100%;
 }
 .fotodocliente img{
     width: 100%;
     height: 100%;
+    border-radius: 100%;
 }
 .partedireita .logout{
     height: 20%;
