@@ -29,15 +29,17 @@
             <h1>Inserir</h1>
         </div>
         <div class="form">
-            <form action="insertmesas.php" method="POST">
+            <form action="insertmesas.php" method="POST" enctype="multipart/form-data">
                 <label for="nomeMesa">Nome da Mesa: </label>
                 <input type="text" name="nomeMesa">
                 <label for="precoMesa">Preço: </label>
                 <input type="number" name="precoMesa">
-                <label for="capacidadeMesa">Capacida da Mesa: </label>
+                <label for="capacidadeMesa">Capacidade da Mesa (Número de pessoas): </label>
                 <input type="number" name="capacidadeMesa">
                 <label for="descMesa">Descrição Da Mesa: </label>
                 <input type="text" name="descMesa">
+                <label for="fotoMesa">Foto: </label>
+                <input type="file" name="fotoMesa">
                 <div class="enviar">
                     <input type="submit" value="enviar">
                 </div>

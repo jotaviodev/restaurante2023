@@ -10,6 +10,12 @@ require('./readmesas.php');
     <title>Lista de Produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="../stylesadm/readprodutos.css">
+    <style>
+        img{
+            width: 50px;
+            height:50px;
+        }
+    </style>
 </head>
 <body>
 <div class="main-menu">
@@ -23,7 +29,6 @@ require('./readmesas.php');
                 <li><a href="../reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
                 <li><a href="../admatracoes.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
                 <li><a href="../admusuarios.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
-
             </ul>
         </nav>
     </div> 
@@ -37,6 +42,7 @@ require('./readmesas.php');
                 <th scope="col">preco_mesa</th>
                 <th scope="col">capacidade_mesa</th>
                 <th scope="col">descricao_mesa</th>
+                <th scope="col">foto_mesa</th>
                 <th scope="col">...</th>
               </tr>
             </thead>
@@ -50,6 +56,7 @@ require('./readmesas.php');
                         echo "<td>".$data[$contador]['preco_mesa']."</td>";
                         echo "<td>".$data[$contador]['capacidade_mesa']."</td>";
                         echo "<td>".$data[$contador]['descricao_mesa']."</td>";
+                        echo "<td><img src='data:image/jpeg;base64,".$data[$contador]['foto_mesa']."'></td>";
                         echo "<td>".
                             "<a class='btn btn-sm btn-primary' href='atualizarmesas.php?id=".$data[$contador]['id_mesa']."'>".
                             "<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>".

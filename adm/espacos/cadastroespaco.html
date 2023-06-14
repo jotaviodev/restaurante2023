@@ -29,7 +29,7 @@
             <h1>Inserir</h1>
         </div>
         <div class="form">
-            <form action="insertespacos.php" method="POST">
+            <form action="insertespacos.php" method="POST" enctype="multipart/form-data">
                 <label for="nomeEspaco">Nome do Espaço: </label>
                 <input type="text" name="nomeEspaco">
                 <label for="precoEspaco">Preço: </label>
@@ -37,7 +37,7 @@
                 <label for="descEspaco">Descrição Da Espaco: </label>
                 <input type="text" name="descEspaco">
                 <label for="fotoEspaco">URL da foto: </label>
-                <input type="text" name="fotoEspaco">
+                <input type="file" name="fotoEspaco">
                 <div class="enviar">
                     <input type="submit" value="enviar">
                 </div>

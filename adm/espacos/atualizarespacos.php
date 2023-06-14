@@ -45,8 +45,6 @@ require("../connectdb.php");
                     <input type="text" name="preco_espaco" value="<?php echo($data[0]['preco_espaco'])?>">
                     <label for="descricao_espaco">Descrição: </label>
                     <input type="text" name="descricao_espaco" value="<?php echo($data[0]['descricao_espaco'])?>">
-                    <label for="foto_espaco">foto: </label>
-                    <input type="text" name="foto_espaco" value="<?php echo($data[0]['foto_espaco'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
