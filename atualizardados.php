@@ -1,6 +1,7 @@
 <?php
 require("./adm/connectdb.php");
-if(isset($_SESSION)){}
+require('./adm/validationlog.php');
+$bd_generos = array("M","F","U");
 ?>       
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,7 @@ if(isset($_SESSION)){}
                 <h1>Atualizar</h1>
             </div>
             <div class="form">
-                <form action="updateclientes.php" method="POST">
+                <form action="updatedados.php" method="POST">
                     <label for="id_cliente">ID: </label>
                     <input type="text" name="id_cliente" value="<?php echo $_SESSION['id']?>" readonly>
                     <label for="nome_cliente">Nome: </label>
@@ -57,8 +58,6 @@ if(isset($_SESSION)){}
                     <input type="text" name="senha_cliente" value="<?php echo $_SESSION['senha']?>">
                     <label for="telefone_cliente">Telefone: </label>
                     <input type="text" name="telefone_cliente" value="<?php echo $_SESSION['telefone']?>">
-                    <label for="foto_cliente">Foto: </label> 
-                    <input type="text" name="foto_cliente" value="<?php echo($data[0]['foto_cliente'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>

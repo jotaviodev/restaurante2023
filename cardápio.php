@@ -59,7 +59,7 @@
                     "<div class='name-price'>".
                     "<h2>".$data[$i]['nome_produto']."  --  ".$data[$i]['preco_produto']." R$"."</h2>".
                     "</div>".
-                    "<h3>".$data[$i]['nome_produto']."</h3>".
+                    "<h3>".$data[$i]['ingredientes_produto']."</h3>".
 
                     "</div>";
                 }
