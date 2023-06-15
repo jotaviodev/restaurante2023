@@ -5,7 +5,6 @@
     $ingredientesDoProduto = $_POST['ingredientesDoProduto'];
     $precoDoProduto = (double)str_replace(",",".",$_POST['precoDoProduto']);
     $tipoDoAlimento = $_POST['tipoDeAlimento'];
-    $fotoProduto = $_FILES['fotoProduto'];
     global $conteudo;
      $arquivo = $fotoProduto;
         if($arquivo['error'] == 0) {
@@ -28,7 +27,7 @@
         ];
         
 
-    $query = "UPDATE produtos  SET id_produto=:id_produto, nome_produto= :nome_produto, ingredientes_produto=:ingredientes_produto, preco_produto = :preco_produto, tipo_produto=:tipo_produto,foto_produto=:foto_produto where id_produto=:id_produto";
+    $query = "UPDATE produtos  SET id_produto=:id_produto, nome_produto= :nome_produto, ingredientes_produto=:ingredientes_produto, preco_produto = :preco_produto, tipo_produto=:tipo_produto where id_produto=:id_produto";
     $atualizar = $conn->prepare($query);
     $atualizar->execute($data);
 

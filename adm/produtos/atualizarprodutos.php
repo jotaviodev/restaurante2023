@@ -101,54 +101,12 @@ require("../connectdb.php");
                         }
                     ?>
                     </select>
-                    <label for="fotoProduto">URL da foto: </label>
-                    <?php
-                        echo "<input type='text'value='".$data["foto_produto"]."' >"
-                    ?>
                     <div class="enviar">
-                        <input type='file' id='photo' name='fotoProduto' >
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-
-    <script>
-        let photo = document.getElementById("photo");
-        
-        //console.log(a)  
-
-        // photo.addEventListener("change", (e)=>{
-            
-           
-        //    e.target.files[0] = GetFile(e.target.files[0]);
-        
-        //     function GetFile(file){
-        //         var byteCharacters = atob(file);
-        //         var byteArrays = [];
-        //         for (var offset = 0; offset < byteCharacters.length; offset += 1024) {
-        //         var slice = byteCharacters.slice(offset, offset + 1024);
-                
-        //         var byteNumbers = new Array(slice.length);
-        //         for (var i = 0; i < slice.length; i++) {
-        //             byteNumbers[i] = slice.charCodeAt(i);
-        //         }
-                
-        //         var byteArray = new Uint8Array(byteNumbers);
-        //         byteArrays.push(byteArray);
-        //         }
-                
-        //         var blob = new Blob(byteArrays, { type: 'image/jpeg' });
-
-        //         return blob;
-        //     }
-
-            
-        // })
-       
-   
-    </script>
 </body>
 </html>
