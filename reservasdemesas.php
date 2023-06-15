@@ -31,7 +31,9 @@
         <?php
             for ($i = 0; $i < count($data); $i++) {
                 echo "<div class='container-table'>".
-                        "<div class='image-table'></div>".
+                        "<div class='image-table'>".
+                        "<img src='data:image/jpeg;base64,".$data[$i]['foto_mesa']."'>".
+                        "</div>".
                         "<div class='table-data'>".
                         "<h1>Mesa: ".$data[$i]['nome_mesa']."</h1>".
                         "<h3>Preço: ".$data[$i]['preco_mesa']." R$/h</h3>".

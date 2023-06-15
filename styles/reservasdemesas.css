@@ -82,3 +82,9 @@ a{
     width: 6vw;
     height: 6vh;
 }
+/*Talvez mudar o object fit*/
+.image-table image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

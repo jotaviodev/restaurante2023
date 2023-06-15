@@ -56,7 +56,7 @@ require('./readmesas.php');
                         echo "<td>".$data[$contador]['preco_mesa']."</td>";
                         echo "<td>".$data[$contador]['capacidade_mesa']."</td>";
                         echo "<td>".$data[$contador]['descricao_mesa']."</td>";
-                        echo "<td><img src='data:image/jpeg;base64,".$data[$contador]['foto_mesa']."'></td>";
+                        echo "<td><img src='data:image/jpeg;base64,".$data[$contador]['foto_mesa']."'><a href='alterimage.php?id=".$data[$contador]['id_mesa']."'> Alterar</a></td>";
                         echo "<td>".
                             "<a class='btn btn-sm btn-primary' href='atualizarmesas.php?id=".$data[$contador]['id_mesa']."'>".
                             "<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>".
