@@ -41,7 +41,7 @@ require("../connectdb.php");
                     <input type="text" name="id_mesa" value="<?php echo($id)?>" readonly>
                     <label for="nome_mesa">Nome: </label>
                     <input type="text" name="nome_mesa" value="<?php echo($data[0]['nome_mesa'])?>">
-                    <label for="data_mesa">Preço: </label>
+                    <label for="data_mesa">Preço(R$/h): </label>
                     <input type="text" name="preco_mesa" value="<?php echo($data[0]['preco_mesa'])?>">
                     <label for="capacidade_mesa">Capacidade: </label>
                     <input type="text" name="capacidade_mesa" value="<?php echo($data[0]['capacidade_mesa'])?>">

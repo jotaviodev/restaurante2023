@@ -41,7 +41,7 @@ require("../connectdb.php");
                     <input type="text" name="id_espaco" value="<?php echo($id)?>" readonly>
                     <label for="nome_espaco">Nome: </label>
                     <input type="text" name="nome_espaco" value="<?php echo($data[0]['nome_espaco'])?>">
-                    <label for="data_espaco">Preço: </label>
+                    <label for="data_espaco">Preço(R$/h): </label>
                     <input type="text" name="preco_espaco" value="<?php echo($data[0]['preco_espaco'])?>">
                     <label for="descricao_espaco">Descrição: </label>
                     <input type="text" name="descricao_espaco" value="<?php echo($data[0]['descricao_espaco'])?>">

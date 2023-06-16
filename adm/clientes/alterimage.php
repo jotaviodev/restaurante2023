@@ -4,8 +4,6 @@ require("../connectdb.php");
     $read = $conn->query("SELECT * FROM cliente where id_cliente ='$id'");
     $read->execute();
     $data = $read->fetchAll(); 
-
-    $bd_generos = array('M','F','U');
 ?>       
 <!DOCTYPE html>
 <html lang="en">
@@ -38,30 +36,11 @@ require("../connectdb.php");
                 <h1>Atualizar</h1>
             </div>
             <div class="form">
-                <form action="updateclientes.php" method="POST">
+                <form action="updateimage.php" method="POST" enctype="multipart/form-data" id="form">
                     <label for="id_cliente">ID: </label>
-                    <input type="text" name="id_cliente" value="<?php echo($id)?>" readonly>
-                    <label for="nome_cliente">Nome: </label>
-                    <input type="text" name="nome_cliente" value="<?php echo($data[0]['nome_cliente'])?>">
-                    <label for="sexo_cliente">Sexo: </label>
-                    <select name="sexo_cliente">
-                    <?php
-                        foreach ($bd_generos as $valor) {
-                            if ($valor == $data[0]['tipo_produto'])
-                            echo "<option value='".$valor."'>".$valor."</option>";
-                        }
-                        foreach ($bd_generos as $valor) {
-                            if ($valor != $data[0]['tipo_produto'])
-                            echo "<option value='".$valor."'>".$valor."</option>";
-                        }
-                    ?>
-                    </select>
-                    <label for="email_cliente">Email: </label>
-                    <input type="text" name="email_cliente" value="<?php echo($data[0]['email_cliente'])?>">
-                    <label for="senha_cliente">Senha: </label>
-                    <input type="text" name="senha_cliente" value="<?php echo($data[0]['senha_cliente'])?>">
-                    <label for="telefone_cliente">Telefone: </label>
-                    <input type="text" name="telefone_cliente" value="<?php echo($data[0]['telefone_cliente'])?>">
+                    <input type="text" name="id_cliente" value="<?php echo($id)?>" id="id" readonly>
+                    <label for="image"></label>
+                    <input type="file" name="image" id ="inputImage">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
@@ -69,6 +48,16 @@ require("../connectdb.php");
             </div>
         </div>
     </div>
-    
+    <script>
+        let form = document.querySelector("#form");
+        let inputImage = document.querySelector("#inputImage");
+        console.log(inputImage)
+        form.onsubmit=(e)=>{
+            if(!inputImage.value){
+                alert("Você deve alterar a imagem");
+                e.preventDefault();
+            }
+        }
+    </script>
 </body>
 </html>

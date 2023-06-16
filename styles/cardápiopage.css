@@ -69,3 +69,10 @@ hr{
     color: whitesmoke;
     font-size: revert;
 }
+.text-produto{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+

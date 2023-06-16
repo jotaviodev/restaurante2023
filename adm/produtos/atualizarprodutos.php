@@ -86,7 +86,7 @@ require("../connectdb.php");
                     <input type="text" name="nomeDoProduto" value="<?php echo($data[0]['nome_produto'])?>">
                     <label for="ingredientesDoProduto">Ingredientes: </label>
                     <input type="text" name="ingredientesDoProduto" value="<?php echo($data[0]['ingredientes_produto'])?>">
-                    <label for="precoDoProduto">Preço: </label>
+                    <label for="precoDoProduto">Preço(R$): </label>
                     <input type="text" name="precoDoProduto" value="<?php echo($data[0]['preco_produto'])?>">
                     <label for="tipoDeAlimento">Tipo: </label>
                     <select name="tipoDeAlimento" id="">

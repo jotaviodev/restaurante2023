@@ -6,9 +6,8 @@
     $email_cliente = $_POST['email_cliente'];
     $senha_cliente = $_POST['senha_cliente'];
     $telefone_cliente = $_POST['telefone_cliente'];
-    $foto_cliente = $_POST['foto_cliente'];
 
-    $query = "UPDATE cliente SET nome_cliente='$nome_cliente', sexo_cliente='$sexo_cliente', email_cliente='$email_cliente', senha_cliente='$senha_cliente', telefone_cliente='$telefone_cliente', foto_cliente='$foto_cliente' where id_cliente = '$id'; ";
+    $query = "UPDATE cliente SET nome_cliente='$nome_cliente', sexo_cliente='$sexo_cliente', email_cliente='$email_cliente', senha_cliente='$senha_cliente', telefone_cliente='$telefone_cliente' where id_cliente = '$id'; ";
     $atualizar = $conn->query($query);
 
     header("location: lerclientes.php");
