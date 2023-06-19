@@ -28,6 +28,7 @@
         </nav>
     </div>
     <div class="pag1">
+        <div class="master">
         <?php
             for ($i = 0; $i < count($data); $i++) {
                 echo "<div class='container-table'>".
@@ -44,6 +45,7 @@
                     "</div>";
             }
         ?>
+        </div>
     </div>
     
 </body>

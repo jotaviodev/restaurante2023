@@ -31,13 +31,13 @@
         <div class="form">
             <form action="insertmesas.php" method="POST" enctype="multipart/form-data">
                 <label for="nomeMesa">Nome da Mesa: </label>
-                <input type="text" name="nomeMesa">
+                <input type="text" name="nomeMesa" id="nomeMesa">
                 <label for="precoMesa">Preço(R$/h): </label>
-                <input type="number" name="precoMesa">
+                <input type="number" name="precoMesa" id="precoMesa">
                 <label for="capacidadeMesa">Capacidade da Mesa (Número de pessoas): </label>
-                <input type="number" name="capacidadeMesa">
+                <input type="number" name="capacidadeMesa" id="capacidadeMesa">
                 <label for="descMesa">Descrição Da Mesa: </label>
-                <input type="text" name="descMesa">
+                <input type="text" name="descMesa" id="descMesa">
                 <label for="fotoMesa">Foto: </label>
                 <input type="file" name="fotoMesa">
                 <div class="enviar">
@@ -47,5 +47,6 @@
         </div>
     </div>
 </div>
+<script src="../../scripts/cadastromesas.js"></script>
 </body>
 </html>

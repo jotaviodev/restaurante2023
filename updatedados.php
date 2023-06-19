@@ -12,5 +12,8 @@ require("./adm/connectdb.php");
 
     session_start();
     session_destroy();
-    header("location: login.php");
+    echo"<script>
+            alert('Dados alterados com sucesso! Você deve fazer login novamente para confirmar a alteração');
+            window.location.href='login.php';
+        </script>"
 ?>

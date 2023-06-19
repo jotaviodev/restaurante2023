@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas de Mesa</title>
-    <link rel="stylesheet" href="styles/reservasdemesas.css">
+    <link rel="stylesheet" href="styles/reservasdeespaços.css">
 </head>
 <body>
     <div class="main-menu">
@@ -31,7 +31,9 @@
         <?php
             for ($i = 0; $i < count($data); $i++) {
                 echo "<div class='container-table'>".
-                        "<div class='image-table'></div>".
+                        "<div class='image-table'>".
+                        "<img src='data:image/jpeg;base64,".$data[$i]['foto_espaco']."'>".
+                        "</div>".
                         "<div class='table-data'>".
                         "<h1>Espaco: ".$data[$i]['nome_espaco']."</h1>".
                         "<h3>Preço: ".$data[$i]['preco_espaco']." R$/h</h3>".

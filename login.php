@@ -5,9 +5,9 @@
         $senha = $_POST['senha'];
     
         $query = "SELECT * FROM cliente WHERE email_cliente = '$email' and senha_cliente = '$senha'";
-        $userData = $conn->query($query);
+        $userData = $conn->prepare($query);
         $userData->execute();
-        $quantidade = count($userData);  
+        $quantidade = $userData->rowCount();
         if($quantidade == 0){
             echo "<script>alert('Email ou Senha incorretos')</script>";
         }else if($quantidade == 1){

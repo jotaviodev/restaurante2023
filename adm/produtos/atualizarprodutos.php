@@ -34,28 +34,6 @@ require("../connectdb.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Produtos</title>
     <link rel="stylesheet" href="../stylesadm/cadastroprodutos.css">
-    <script>
-        function GetFile(file){
-                 var byteCharacters = atob(file);
-                 var byteArrays = [];
-                 for (var offset = 0; offset < byteCharacters.length; offset += 1024) {
-                 var slice = byteCharacters.slice(offset, offset + 1024);
-                
-                 var byteNumbers = new Array(slice.length);
-                 for (var i = 0; i < slice.length; i++) {
-                     byteNumbers[i] = slice.charCodeAt(i);
-                 }
-                
-                 var byteArray = new Uint8Array(byteNumbers);
-                 byteArrays.push(byteArray);
-                 }
-                
-                 var blob = new Blob(byteArrays, { type: 'image/jpeg' });
-
-                 return blob;
-             }
-    </script>
-
 </head>
 <body>
 <div class="main-menu">
@@ -83,13 +61,13 @@ require("../connectdb.php");
                     <label for="idDoProduto">ID: </label>
                     <input type="text" name="idDoProduto" value="<?php echo($id)?>" readonly>
                     <label for="nomeDoProduto">Nome: </label>
-                    <input type="text" name="nomeDoProduto" value="<?php echo($data[0]['nome_produto'])?>">
+                    <input type="text" name="nomeDoProduto" id="nomeDoProduto" value="<?php echo($data[0]['nome_produto'])?>">
                     <label for="ingredientesDoProduto">Ingredientes: </label>
-                    <input type="text" name="ingredientesDoProduto" value="<?php echo($data[0]['ingredientes_produto'])?>">
+                    <input type="text" name="ingredientesDoProduto" id="ingredientesDoProduto" value="<?php echo($data[0]['ingredientes_produto'])?>">
                     <label for="precoDoProduto">Preço(R$): </label>
-                    <input type="text" name="precoDoProduto" value="<?php echo($data[0]['preco_produto'])?>">
+                    <input type="text" name="precoDoProduto" id="precoDoProduto" value="<?php echo($data[0]['preco_produto'])?>">
                     <label for="tipoDeAlimento">Tipo: </label>
-                    <select name="tipoDeAlimento" id="">
+                    <select name="tipoDeAlimento" id="tipoDeAlimento">
                     <?php
                         foreach ($bd_categorias as $valor) {
                             if ($valor == $data[0]['tipo_produto'])
@@ -108,5 +86,6 @@ require("../connectdb.php");
             </div>
         </div>
     </div>
+    <script src="../../scripts/cadastroprodutos.js"></script>
 </body>
 </html>

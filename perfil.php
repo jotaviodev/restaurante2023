@@ -67,10 +67,18 @@
                 <?php echo "<td><img src='data:image/jpeg;base64,".$d['foto_produto']."'></td>";?>
                 </div>
                 <div class="logout">
-                    <button>Log-out</button>
+                    <button onclick="confirmed()" style="cursor: pointer;">Log-out</button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function confirmed(){
+            let response = confirm("Você realmente deseja sair da sua conta?");
+            if(response){
+                window.location.href="./adm/logout.php";
+            }
+        }
+    </script>
 </body>
 </html>

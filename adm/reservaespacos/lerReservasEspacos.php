@@ -4,7 +4,6 @@ $queryNomeCliente = "SELECT cliente.nome_cliente FROM reservaespaco INNER JOIN c
 $queryNomeCliente = $conn->query($queryNomeCliente);
 $queryNomeCliente->execute();
 $dataNomeCliente = $queryNomeCliente->fetchAll();
-print_r($dataNomeCliente);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,10 +47,11 @@ print_r($dataNomeCliente);
             <tbody>
                 <?php
                     $contador = 0;  
+                    $contador2 = count($dataNomeCliente)-1;
                     while($contador < count($data)){
                         echo "<tr>";
                         echo "<td>".$data[$contador]['id_reservaespaco']."</td>";
-                        echo "<td> <a href='./defaultcliente.php?id=".$data[$contador]['id_clientereserva']."'>".$dataNomeCliente[$contador][0]."</td>";
+                        echo "<td> <a href='./defaultcliente.php?id=".$data[$contador]['id_clientereserva']."'>".$dataNomeCliente[$contador2][0]."</td>";
                         echo "<td> <a href='../espacos/lerespacos.php'>".$data[$contador]['id_espaco']."</td>";
                         echo "<td>".$data[$contador]['data_reservaespaco']."</td>";
                         echo "<td>".$data[$contador]['horario_reserva']."</td>";
@@ -68,6 +68,7 @@ print_r($dataNomeCliente);
                             "</a".
                         "</td>";
                         $contador++;
+                        $contador2--;
                     }
                 ?>
             </tbody>

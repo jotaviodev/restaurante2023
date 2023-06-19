@@ -40,13 +40,13 @@ require("../connectdb.php");
                     <label for="id_mesa">ID: </label>
                     <input type="text" name="id_mesa" value="<?php echo($id)?>" readonly>
                     <label for="nome_mesa">Nome: </label>
-                    <input type="text" name="nome_mesa" value="<?php echo($data[0]['nome_mesa'])?>">
+                    <input type="text" name="nome_mesa" id="nomeMesa" value="<?php echo($data[0]['nome_mesa'])?>">
                     <label for="data_mesa">Preço(R$/h): </label>
-                    <input type="text" name="preco_mesa" value="<?php echo($data[0]['preco_mesa'])?>">
+                    <input type="text" name="preco_mesa" id="precoMesa" value="<?php echo($data[0]['preco_mesa'])?>">
                     <label for="capacidade_mesa">Capacidade: </label>
-                    <input type="text" name="capacidade_mesa" value="<?php echo($data[0]['capacidade_mesa'])?>">
+                    <input type="text" name="capacidade_mesa" id="capacidadeMesa" value="<?php echo($data[0]['capacidade_mesa'])?>">
                     <label for="descricao_mesa">Descrição: </label>
-                    <input type="text" name="descricao_mesa" value="<?php echo($data[0]['descricao_mesa'])?>">
+                    <input type="text" name="descricao_mesa" id="descMesa" value="<?php echo($data[0]['descricao_mesa'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
@@ -54,5 +54,6 @@ require("../connectdb.php");
             </div>
         </div>
     </div>
+    <script src="../../scripts/cadastromesas.js"></script>
 </body>
 </html>
