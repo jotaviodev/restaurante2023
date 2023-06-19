@@ -19,13 +19,13 @@ require("../connectdb.php");
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="../indexadm.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                    <a href="../indexadm.php"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
                 </div>
-                <li><a href="../indexprodutos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
-                <li><a href="../mesasEspacos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
-                <li><a href="../reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
-                <li><a href="../admatracoes.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
-                <li><a href="../admusuarios.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
+                <li><a href="../indexprodutos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
+                <li><a href="../mesasEspacos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
+                <li><a href="../reservas.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
+                <li><a href="../admatracoes.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
+                <li><a href="../admusuarios.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
 
             </ul>
         </nav>
@@ -38,13 +38,15 @@ require("../connectdb.php");
             <div class="form">
                 <form action="updateatracoes.php" method="POST">
                     <label for="id_atracao">ID: </label>
-                    <input type="text" name="id_atracao" value="<?php echo($id)?>" readonly>
+                    <input type="text" name="id_atracao" id="id_atracao" value="<?php echo($id)?>" readonly>
                     <label for="nome_atracao">Nome: </label>
-                    <input type="text" name="nome_atracao" value="<?php echo($data[0]['nome_atracao'])?>">
+                    <input type="text" name="nome_atracao" id="nome_atracao" value="<?php echo($data[0]['nome_atracao'])?>">
                     <label for="data_atracao">Data: </label>
-                    <input type="date" name="data_atracao" value="<?php echo($data[0]['data_atracao'])?>">
-                    <label for="descricao_atracao">Descrição: </label>
-                    <input type="text" name="descricao_atracao" value="<?php echo($data[0]['descricao_atracao'])?>">
+                    <input type="date" name="data_atracao" id="data_atracao" value="<?php echo($data[0]['data_atracao'])?>">
+                    <label for="horario_atracao">Horário: </label>
+                    <input type="time" name="horario_atracao" id="horario_atracao" value="<?php echo($data[0]['horario_atracao'])?>">
+                    <label for="data_atracao">Data: </label>
+                    <input type="text" name="descricao_atracao" id="descricao_atracao" value="<?php echo($data[0]['descricao_atracao'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
@@ -52,5 +54,6 @@ require("../connectdb.php");
             </div>
         </div>
     </div>
+    <script src="../../scripts/cadastroatracoes.js"></script>
 </body>
 </html>

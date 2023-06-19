@@ -37,10 +37,9 @@ require('./readfuncionarios.php');
                 <th scope="col">cpf_funcionario</th>
                 <th scope="col">sexo_funcionario</th>
                 <th scope="col">cargo_funcionario</th>
-                <th scope="col">email_funcionario</th>
-                <th scope="col">senha_funcionario</th>
-                <th scope="col">telefone_funcionario</th>
-                <th scope="col">foto_funcionario</th>
+                <th scope="col">email</th>
+                <th scope="col">senha</th>
+                <th scope="col">telefone</th>
                 <th scope="col">salario_funcionario</th>
                 <th scope="col">...</th>
               </tr>
@@ -54,11 +53,10 @@ require('./readfuncionarios.php');
                         echo "<td>".$data[$contador]['nome_funcionario']."</td>";
                         echo "<td>".$data[$contador]['cpf_funcionario']."</td>";
                         echo "<td>".$data[$contador]['sexo_funcionario']."</td>";
-                        echo "<td>".$data[$contador]['cargo_funcionario']."</td>";
-                        echo "<td>".$data[$contador]['email_funcionario']."</td>";
-                        echo "<td>".$data[$contador]['senha_funcionario']."</td>";
-                        echo "<td>".$data[$contador]['telefone_funcionario']."</td>";
-                        echo "<td>".$data[$contador]['foto_funcionario']."</td>";
+                        echo "<td>".$data[$contador]['cargo']."</td>";
+                        echo "<td>".$data[$contador]['email']."</td>";
+                        echo "<td>".$data[$contador]['senha']."</td>";
+                        echo "<td>".$data[$contador]['telefone']."</td>";
                         echo "<td>".$data[$contador]['salario_funcionario']."</td>";
                         echo "<td>".
                             "<a class='btn btn-sm btn-primary' href='atualizarfuncionarios.php?id=".$data[$contador]['id_funcionario']."'>".

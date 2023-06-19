@@ -19,13 +19,13 @@ require("../connectdb.php");
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="../indexadm.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                    <a href="../indexadm.php"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
                 </div>
-                <li><a href="../indexprodutos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
-                <li><a href="../mesasEspacos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
-                <li><a href="../reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
-                <li><a href="../admatracoes.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
-                <li><a href="../admusuarios.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
+                <li><a href="../indexprodutos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
+                <li><a href="../mesasEspacos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
+                <li><a href="../reservas.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
+                <li><a href="../admatracoes.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
+                <li><a href="../admusuarios.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
 
             </ul>
         </nav>
@@ -40,11 +40,11 @@ require("../connectdb.php");
                     <label for="id_espaco">ID: </label>
                     <input type="text" name="id_espaco" value="<?php echo($id)?>" readonly>
                     <label for="nome_espaco">Nome: </label>
-                    <input type="text" name="nome_espaco" value="<?php echo($data[0]['nome_espaco'])?>">
+                    <input type="text" name="nome_espaco" id="nome_espaco" value="<?php echo($data[0]['nome_espaco'])?>">
                     <label for="data_espaco">Preço(R$/h): </label>
-                    <input type="text" name="preco_espaco" value="<?php echo($data[0]['preco_espaco'])?>">
+                    <input type="text" name="preco_espaco" id="preco_espaco"value="<?php echo($data[0]['preco_espaco'])?>">
                     <label for="descricao_espaco">Descrição: </label>
-                    <input type="text" name="descricao_espaco" value="<?php echo($data[0]['descricao_espaco'])?>">
+                    <input type="text" name="descricao_espaco" id="descricao_espaco"value="<?php echo($data[0]['descricao_espaco'])?>">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
@@ -52,5 +52,6 @@ require("../connectdb.php");
             </div>
         </div>
     </div>
+    <script src="../../scripts/atualizaespacos.js"></script>
 </body>
 </html>

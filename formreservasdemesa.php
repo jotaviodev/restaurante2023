@@ -60,12 +60,12 @@
         <nav>
             <ul>
                 <a href="../index.html"><img src="./imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="../about.html">Sobre nós</a></li>
-                <li><a href="../cardápio.php">Nosso Cardápio</a></li>
-                <li><a href="../reservas.html">Reservas</a></li>
-                <li><a href="../atrações.html">Atrações</a></li>
-                <li><a href="../locais.html">Instalações Físicas</a></li>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./about.html">Sobre nós</a></li>
+                <li><a href="./cardápio.php">Nosso Cardápio</a></li>
+                <li><a href="./reservas.html">Reservas</a></li>
+                <li><a href="./atrações.html">Atrações</a></li>
+                <li><a href="./locais.html">Instalações Físicas</a></li>
                 <li><a href="./perfil.php">Perfil</a></li> 
             </ul>
         </nav>

@@ -4,7 +4,24 @@ $id = $_GET['id'];
 $query = "SELECT * FROM cliente WHERE id_cliente = '$id'";
 $query = $conn->query($query);
 $query->execute();
-$data = $query->fetchAll();
+$dados = $query->fetchAll();
+$data = [];
+    foreach($dados as $d){
+        if(ctype_xdigit(bin2hex($d['foto_cliente']))){
+            $base64image = base64_encode($d['foto_cliente']);
+            $d['foto_cliente'] = $base64image;
+        }
+        $data[] = [
+            "id_cliente"=>$d['id_cliente'],
+            "nome_cliente"=>$d['nome_cliente'],
+            "sexo_cliente"=>$d['sexo_cliente'],
+            "email_cliente"=>$d['email_cliente'],
+            "senha_cliente"=>$d['senha_cliente'],
+            "telefone_cliente"=>$d['telefone_cliente'],
+            "foto_cliente"=>$d['foto_cliente'], 
+        ];
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +38,13 @@ $data = $query->fetchAll();
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="../indexadm.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                    <a href="../indexadm.php"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
                 </div>
-                <li><a href="../indexprodutos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
-                <li><a href="../mesasEspacos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
-                <li><a href="../reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
-                <li><a href="../admatracoes.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
-                <li><a href="../admusuarios.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
+                <li><a href="../indexprodutos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
+                <li><a href="../mesasEspacos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
+                <li><a href="../reservas.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
+                <li><a href="../admatracoes.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
+                <li><a href="../admusuarios.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
 
             </ul>
         </nav>
@@ -57,7 +74,7 @@ $data = $query->fetchAll();
                         echo "<td>".$data[$contador]['email_cliente']."</td>";
                         echo "<td>".$data[$contador]['senha_cliente']."</td>";
                         echo "<td>".$data[$contador]['telefone_cliente']."</td>";
-                        echo "<td>".$data[$contador]['foto_cliente']."</td>";
+                        echo "<td><img src='data:image/jpeg;base64,".$data[$contador]['foto_cliente']."'>".
                         
                         "</td>";
                         $contador++;

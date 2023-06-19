@@ -6,3 +6,9 @@ function alteraCorMenu(option){
 function retornaCorMenu(option){
     option.style.backgroundColor=""
 }
+function confirmDelete(id){
+    let confirmation = confirm('Você realmente deseja deletar este item?');
+    if(confirmation){
+        window.location.href="./deleteprodutos.php?id=" + id
+    }
+}

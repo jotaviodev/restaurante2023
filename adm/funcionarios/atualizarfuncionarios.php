@@ -22,13 +22,13 @@ require("../connectdb.php");
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="../indexadm.html"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                    <a href="../indexadm.php"><img src="../../imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
                 </div>
-                <li><a href="../indexprodutos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
-                <li><a href="../mesasEspacos.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
-                <li><a href="../reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
-                <li><a href="../admatracoes.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
-                <li><a href="../admusuarios.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
+                <li><a href="../indexprodutos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Cardápio</a></li>
+                <li><a href="../mesasEspacos.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Mesas e espaços</a></li>
+                <li><a href="../reservas.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
+                <li><a href="../admatracoes.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
+                <li><a href="../admusuarios.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Usuários</a></li>
 
             </ul>
         </nav>
@@ -78,16 +78,13 @@ require("../connectdb.php");
                     </select>
 
                     <label for="email_funcionario">Email: </label>
-                    <input type="text" name="email_funcionario" value="<?php echo($data[0]['email_funcionario'])?>">
+                    <input type="text" name="email_funcionario" value="<?php echo($data[0]['email'])?>">
                     
                     <label for="senha_funcionario">Senha: </label>
-                    <input type="text" name="senha_funcionario" value="<?php echo($data[0]['senha_funcionario'])?>">
+                    <input type="text" name="senha_funcionario" value="<?php echo($data[0]['senha'])?>">
                     
                     <label for="telefone_funcionario">Telefone: </label>
-                    <input type="text" name="telefone_funcionario" value="<?php echo($data[0]['telefone_funcionario'])?>">
-                    
-                    <label for="foto_funcionario">Foto: </label>
-                    <input type="text" name="foto_funcionario" value="<?php echo($data[0]['foto_funcionario'])?>">
+                    <input type="text" name="telefone_funcionario" value="<?php echo($data[0]['telefone'])?>">
                     
                     <label for="salario_funcionario">Salario: </label>
                     <input type="text" name="salario_funcionario" value="<?php echo($data[0]['salario_funcionario'])?>">
