@@ -24,7 +24,7 @@
             $_SESSION['telefone'] = $userData[0][5];
             $_SESSION['foto'] = $userData[0][6];
             
-           header("location: index.html");
+           header("location: index.php");
         }
     }
 ?>

@@ -1,3 +1,6 @@
+<?php
+    require("./validationlogadm.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,7 +34,7 @@
         </div>
         <div class="partedireita">
             <div class="up">
-                <a href="../cadastrousuarios.php"><button src="" value="" style="font-size: x-large;">Inserir</button></a>
+                <a href="../cadastrousuarios.html"><button src="" value="" style="font-size: x-large;">Inserir</button></a>
             </div>
         </div>
     </div>

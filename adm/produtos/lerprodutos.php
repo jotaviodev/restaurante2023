@@ -1,6 +1,6 @@
 <?php
 require('./readprodutos.php');
-
+require("../validationlogadm.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

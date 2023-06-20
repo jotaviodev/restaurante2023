@@ -1,4 +1,5 @@
 <?php
+require("../validationlogadm.php");
 require('./readclientes.php');
 ?>
 <!DOCTYPE html>

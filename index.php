@@ -1,3 +1,25 @@
+<?php
+    require("./adm/connectdb.php");
+    $read = $conn->query('SELECT * FROM produtos ORDER BY id_produto asc');
+    $read->execute();
+    $dados = $read->fetchAll(); 
+    $data = [];
+    foreach($dados as $d){
+        if(ctype_xdigit(bin2hex($d['foto_produto']))){
+            $base64image = base64_encode($d['foto_produto']);
+            $d['foto_produto'] = $base64image;
+        }
+        $data[] = [
+            "id_produto"=>$d['id_produto'],
+            "nome_produto"=>$d['nome_produto'],
+            "ingredientes_produto"=>$d['ingredientes_produto'],
+            "preco_produto"=>$d['preco_produto'],
+            "tipo_produto"=>$d['tipo_produto'],
+            "foto_produto"=>$d['foto_produto'], 
+        ];
+    }
+    $quantidadeProdutos = $read->rowCount();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -49,38 +71,32 @@
         <h1>Pratos em alta</h1>
         <hr>
         </div>
-        
         <div class="foodmaster">
-            <div class="food">
-                <div class="foodbox">
-                    <div class="minbox">
-
-                    </div>
-                </div>
-            </div>
-            <div class="food">
-                <div class="foodbox">
-                    <div class="minbox">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="food">
-                <div class="foodbox">
-                    <div class="minbox">
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="food">
-                <div class="foodbox">
-                    <div class="minbox">
-                        
-                    </div>
-                </div>
-            </div>
+            <?php
+                for($i=0;$i<4;$i++){
+                    $currentValues = array();
+                    $sort = rand(0,$quantidadeProdutos-1);
+                    array_push($currentValues,$sort);
+                    foreach($currentValues as $numeroatual){
+                        if($numeroatual==$sort){
+                            $sort = rand(0,$quantidadeProdutos-1);
+                        }
+                    }
+                    echo"<div class='food'>".
+                    "<div class='minbox'>".
+                    "<img src='data:image/jpeg;base64,".$data[$sort]['foto_produto']."'>".
+                    "</div>".
+                    "<div class='name-price'>".
+                    "<h2>".$data[$sort]['nome_produto']."  --  ".$data[$sort]['preco_produto']." R$"."</h2>".
+                    "</div>".
+                    "<div class='text-produto'>".
+                    "<h3>".$data[$sort]['ingredientes_produto']."</h3>".
+                    "</div>".
+                    "</div>";
+                }
+                
+            ?>
         </div>
-    </div>
 
     <footer class="rodape">
         <div class="esquerda-rodape">

@@ -89,3 +89,30 @@
     font-size: xx-large;
     border-top: 2vh;
 }
+
+.minbox img{
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+}
+
+.foodmaster{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.name-price{
+    display: flex;
+}
+.foodmaster h1,h2,h3{
+    color: whitesmoke;
+    font-size: revert;
+}
+.text-produto{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}

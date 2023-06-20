@@ -24,7 +24,7 @@
     justify-content: center;
 }
 .partedireita .boxgeral{
-    background-color: orange;
+    background-color: #6c0202d2;
     height: 80vh;
     width: 85%;
     border-radius: 40px;
@@ -49,6 +49,7 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
+    object-fit: cover;
 }
 .partedireita .logout{
     height: 20%;

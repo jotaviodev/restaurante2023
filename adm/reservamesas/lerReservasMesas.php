@@ -1,4 +1,5 @@
 <?php
+require("../validationlogadm.php");
 require('./readReservasMesas.php');
 $queryNomeCliente = "SELECT cliente.nome_cliente FROM reservamesa INNER JOIN cliente ON cliente.id_cliente = reservamesa.id_clientereserva;";
 $queryNomeCliente = $conn->query($queryNomeCliente);

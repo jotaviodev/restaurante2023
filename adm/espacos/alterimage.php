@@ -1,4 +1,5 @@
 <?php
+require("../validationlogadm.php");
 require("../connectdb.php");
     $id = $_GET['id'];
     $read = $conn->query("SELECT * FROM espacos where id_espaco ='$id'");

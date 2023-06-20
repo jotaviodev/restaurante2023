@@ -1,4 +1,5 @@
 <?php
+    require("../validationlogadm.php");
     require("../connectdb.php");
     $id = $_POST['id_atracao'];
     $nome_atracao = $_POST['nome_atracao'];

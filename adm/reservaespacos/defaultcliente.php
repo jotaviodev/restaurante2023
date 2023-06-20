@@ -1,4 +1,5 @@
 <?php
+require("../validationlogadm.php");
 require("../connectdb.php");
 $id = $_GET['id'];
 $query = "SELECT * FROM cliente WHERE id_cliente = '$id'";

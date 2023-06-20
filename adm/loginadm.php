@@ -26,7 +26,7 @@
             $_SESSION['telefone_adm'] = $admData[0][7];
             $_SESSION['foto_adm'] = $admData[0][8];
             $_SESSION['salario_adm'] = $admData[0][9];
-            header("location:indexadm.html");
+            header("location:indexadm.php");
         }
     }
 ?>

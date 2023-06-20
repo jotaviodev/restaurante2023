@@ -1,4 +1,5 @@
 <?php
+    
     require("../connectdb.php");
     $id = $_GET['id'];
 
