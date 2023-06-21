@@ -62,8 +62,10 @@
                     <div class="agenda">
                         <h2>A partir das 20:00h:</h2>
                         <?php
+                        //formatar a string pra data
                             for($i=0;$i<count($dataAtrac);$i++){
-                                echo"<h2>".$dataAtrac[$i]['data_atracao'].": ".$dataAtrac[$i]['nome_atracao']."</h2>";
+                                $data1 = DateTime::createFromFormat("d-m-Y",$dataAtrac[$i]['data_atracao']);
+                                echo"<h2>".$data1->format("d,m,Y").": ".$dataAtrac[$i]['nome_atracao']."</h2>";
                             }                        
                         ?>
                     </div>
