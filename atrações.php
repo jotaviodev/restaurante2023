@@ -19,6 +19,11 @@
         ];
     }
     $quantidadeProdutos = $read->rowCount();
+    
+    //Atrações
+    $read1 = $conn->query('SELECT * FROM atracoes ORDER BY id_atracao asc');
+    $read1->execute();
+    $dataAtrac = $read1->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,13 +37,13 @@
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="./index.html"><img src="imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                    <a href="./index.php"><img src="imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
                 </div>
-                <li><a href="./index.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Início</a></li>
+                <li><a href="./index.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Início</a></li>
                 <li><a href="./about.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Sobre nós</a></li>
                 <li><a href="./cardápio.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Nosso Cardápio</a></li>
                 <li><a href="./reservas.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Reservas</a></li>
-                <li><a href="./atrações.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
+                <li><a href="./atrações.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Atrações</a></li>
                 <li><a href="./locais.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Instalações Físicas</a></li>
                 <li><a href="./perfil.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Perfil</a></li> 
             </ul>
@@ -56,22 +61,13 @@
                     </div>
                     <div class="agenda">
                         <h2>A partir das 20:00h:</h2>
-                        <h3>Sexta-Feira: Aurea</h3>
-                        <h3>Sábado: Menos é mais</h3>
-                        <h3>Domingo: Duda Santos</h3>
+                        <?php
+                            for($i=0;$i<count($dataAtrac);$i++){
+                                echo"<h2>".$dataAtrac[$i]['data_atracao'].": ".$dataAtrac[$i]['nome_atracao']."</h2>";
+                            }                        
+                        ?>
                     </div>
-                </div>
-                <div class="boxbaixo">
-                    <div class="titulo">
-                        <h1>Agenda de Atrações:</h1>    
-                    </div>
-                    <div class="agenda">
-                        <h2>A partir das 20:00h:</h2>
-                        <h3>Sexta-Feira: Aurea</h3>
-                        <h3>Sábado: Menos é mais</h3>
-                        <h3>Domingo: Duda Santos</h3>
-                    </div>
-                </div>
+                </div>"
             </div>
          </div>   
     </div>
