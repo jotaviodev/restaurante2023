@@ -22,9 +22,6 @@
     color: whitesmoke;
 }
 
-.pag2{
-    height: 100vh;
-}
 hr{
     height: 0.4vh;
     background-color: #4B0101;
@@ -122,4 +119,63 @@ hr{
     display: flex;
     justify-content: center;
     height: 40%;
+}
+
+.pag2{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardapio-container{
+    width: 50vh;
+    height: 50vh;
+    background-color: brown;
+    position: relative;
+    margin-top: 5vh;
+}
+.border{
+    height: 100px;
+    width: 100px;
+    background-color: #db8764;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.border2{
+    height: 100px;
+    width: 100px;
+    background-color: #db8764;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(50%,-50%);
+    right: 0;
+    top: 0;
+}
+.border3{
+    height: 100px;
+    width: 100px;
+    background-color: #db8764;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(-50%,50%);
+    left: 0;
+    bottom: 0;
+}
+.border4{
+    height: 100px;
+    width: 100px;
+    background-color: #db8764;
+    border-radius: 100%;
+    position: absolute;
+    transform: translate(50%,50%);
+    right: 0;
+    bottom: 0;
+}
+.image{
+    width: 42.5vh;
+    height: 40vh;
+    background-color: black;
+    margin-left: 35px;
+    margin-top: 50px;
 }

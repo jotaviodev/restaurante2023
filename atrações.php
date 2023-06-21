@@ -64,12 +64,13 @@
                         <?php
                         //formatar a string pra data
                             for($i=0;$i<count($dataAtrac);$i++){
-                                $data1 = DateTime::createFromFormat("d-m-Y",$dataAtrac[$i]['data_atracao']);
-                                echo"<h2>".$data1->format("d,m,Y").": ".$dataAtrac[$i]['nome_atracao']."</h2>";
+                                $date = (string)$dataAtrac[$i]['data_atracao'];
+                                $dates = explode("-",$date);
+                                echo"<h2>".$dates[2]."/".$dates[1]."/".$dates[0].": ".$dataAtrac[$i]['nome_atracao']."</h2>";
                             }                        
                         ?>
                     </div>
-                </div>"
+                </div>
             </div>
          </div>   
     </div>

@@ -60,9 +60,14 @@
         <h1>Restaurante temático<br> Nordestino, só pra quem <br> ama o Nordeste</h1>
         </div>
 
-        <div class="option-1">
-            <button><a href="./atrações.html">Eventos</a></button>
-            <button><a href="#rodape">Fale conosco</a></button>
+        <div class="cardapio-container">
+            <div class="border"></div>
+            <div class="border2"></div>
+            <div class="border3"></div>
+            <div class="border4"></div>
+            <div class="image">
+                
+            </div>
         </div>
     </div>
 
