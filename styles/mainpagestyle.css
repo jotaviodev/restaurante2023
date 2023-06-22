@@ -8,6 +8,8 @@
     align-items: center;
     background-image: url("../imagens/indexpage/theme.png");
     border-top: 4px solid black;
+    background-size: 100%;
+    
 }
 .button{
     margin-top: 60vh;
@@ -114,6 +116,9 @@ hr{
 .name-price{
     display: flex;
 }
+.name-price h2{
+    font-size: xx-large;
+}
 .foodmaster h1,h2,h3{
     color: whitesmoke;
     font-size: revert;
@@ -124,15 +129,19 @@ hr{
     justify-content: center;
     height: 40%;
 }
+.text-produto h2{
+    font-size: x-large
+}
 
 .pag2{
-    height: 100vh;
+    height: 130vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 .parteesquerda,.partedireita{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardapio-container{
@@ -141,6 +150,7 @@ hr{
     background-color: brown;
     position: relative;
     margin-top: 5vh;
+    padding-top: 50px;
 }
 .text-container{
     width: 40vh;
@@ -148,6 +158,13 @@ hr{
     background-color: brown;
     position: relative;
     margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-container h1{
+    color: whitesmoke;
 }
 .border{
     height: 100px;
@@ -156,6 +173,8 @@ hr{
     border-radius: 100%;
     position: absolute;
     transform: translate(-50%,-50%);
+    top: 0;
+    left: 0;
 }
 .border2{
     height: 100px;
@@ -192,5 +211,20 @@ hr{
     height: 40vh;
     background-color: black;
     margin-left: 35px;
-    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("../imagens/indexpage/boximage.png");
+    background-size: 100%;
+}
+.image button{
+    font-size: x-large;
+    margin-bottom: 10px;
+    height: 6vh;
+    width: 8vw;
+    background-color: brown;
+    color: whitesmoke;
+    border: none;
+    border-top: 3px solid black;
+    border-radius: 20px;
 }

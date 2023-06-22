@@ -31,6 +31,12 @@
     <meta charset="UTF-8">
     <title>Nossas Atrações</title>
     <link rel="stylesheet" href="styles/atraçõespage.css">
+    <style>
+        .pag3 h1{
+            color: #6c0202d2;
+            margin-left: 2vh;
+        }
+    </style>
 </head>
 <body>
     <div class="main-menu">
@@ -97,38 +103,37 @@
          </div>
          <hr style="margin-top: 15vh;">
     </div>
-        
-    <div class="pag3">
-        <div class="title-page3">
-        <h1>Pratos em alta</h1>
-        </div>
-        
-        <div class="foodmaster">
-            <?php
-                for($i=0;$i<4;$i++){
-                    $currentValues = array();
-                    $sort = rand(0,$quantidadeProdutos-1);
-                    array_push($currentValues,$sort);
-                    foreach($currentValues as $numeroatual){
-                        if($numeroatual==$sort){
-                            $sort = rand(0,$quantidadeProdutos-1);
+    <?php
+    if($read->rowCount()!=0){
+        echo"<div class='pag3'>
+            <div class='title-page3'>
+            <h1>Pratos em alta</h1>
+            </div>
+            <div class='foodmaster'>";
+                    for($i=0;$i<4 && $i<$read->rowCount();$i++){
+                        $currentValues = array();
+                        $sort = rand(0,$quantidadeProdutos-1);
+                        array_push($currentValues,$sort);
+                        foreach($currentValues as $numeroatual){
+                            if($numeroatual==$sort){
+                                $sort = rand(0,$quantidadeProdutos-1);
+                            }
                         }
+                        echo"<div class='food'>".
+                        "<div class='minbox'>".
+                        "<img src='data:image/jpeg;base64,".$data[$sort]['foto_produto']."'>".
+                        "</div>".
+                        "<div class='name-price'>".
+                        "<h2>".$data[$sort]['nome_produto']."  --  ".$data[$sort]['preco_produto']." R$"."</h2>".
+                        "</div>".
+                        "<div class='text-produto'>".
+                        "<h2>".$data[$sort]['ingredientes_produto']."</h2>".
+                        "</div>".
+                        "</div>";
                     }
-                    echo"<div class='food'>".
-                    "<div class='minbox'>".
-                    "<img src='data:image/jpeg;base64,".$data[$sort]['foto_produto']."'>".
-                    "</div>".
-                    "<div class='name-price'>".
-                    "<h2>".$data[$sort]['nome_produto']."  --  ".$data[$sort]['preco_produto']." R$"."</h2>".
-                    "</div>".
-                    "<div class='text-produto'>".
-                    "<h3>".$data[$sort]['ingredientes_produto']."</h3>".
-                    "</div>".
-                    "</div>";
-                }
-            ?>
-        </div>
-    </div>
+           echo"</div>";
+    }
+    ?>
     <footer class="rodape">
         <div class="esquerda-rodape">
             <div class="titulo">
