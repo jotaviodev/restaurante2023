@@ -39,9 +39,9 @@ $bd_generos = array("M","F","U");
                     <label for="id_cliente">ID: </label>
                     <input type="text" name="id_cliente" value="<?php echo $_SESSION['id']?>" readonly>
                     <label for="nome_cliente">Nome: </label>
-                    <input type="text" name="nome_cliente" value="<?php echo $_SESSION['nome'] ?>">
+                    <input type="text" name="nome_cliente" id="nome_cliente" value="<?php echo $_SESSION['nome'] ?>">
                     <label for="sexo_cliente">Sexo: </label>
-                    <select name="sexo_cliente">
+                    <select name="sexo_cliente" id="sexo_cliente">
                     <?php
                         foreach ($bd_generos as $valor) {
                             if ($valor == $_SESSION['sexo'])
@@ -54,11 +54,11 @@ $bd_generos = array("M","F","U");
                     ?>
                     </select>
                     <label for="email_cliente">Email: </label>
-                    <input type="text" name="email_cliente" value="<?php echo $_SESSION['email']?>">
+                    <input type="text" name="email_cliente" id="email_cliente" value="<?php echo $_SESSION['email']?>">
                     <label for="senha_cliente">Senha: </label>
-                    <input type="text" name="senha_cliente" value="<?php echo $_SESSION['senha']?>">
+                    <input type="text" name="senha_cliente" id="senha_cliente" value="<?php echo $_SESSION['senha']?>">
                     <label for="telefone_cliente">Telefone: </label>
-                    <input type="text" name="telefone_cliente" value="<?php echo $_SESSION['telefone']?>">
+                    <input type="tel" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}"name="telefone_cliente" id="telefone_cliente" value="<?php echo $_SESSION['telefone']?>"placeholder="(XX)XXXXX-XXXX">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
@@ -66,5 +66,6 @@ $bd_generos = array("M","F","U");
             </div>
         </div>
     </div>
+    <script src="./scripts/atualizardados.js"></script>
 </body>
 </html>
