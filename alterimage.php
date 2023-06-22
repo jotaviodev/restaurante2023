@@ -1,17 +1,22 @@
 <?php
-    require("./adm/readForMesas.php");
-?>
+require("./adm/validationlog.php");
+require("./adm/connectdb.php");
+    $id = $_GET['id'];
+    $read = $conn->query("SELECT * FROM cliente where id_cliente ='$id'");
+    $read->execute();
+    $data = $read->fetchAll(); 
+?>       
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas de Mesa</title>
-    <link rel="stylesheet" href="styles/reservasdemesas.css">
+    <title>Cadastro atracoes</title>
+    <link rel="stylesheet" href="./adm/stylesadm/cadastroatracoes.css">
 </head>
 <body>
-    <div class="main-menu">
+<div class="main-menu">
         <nav>
             <ul>
                 <div class="menu">
@@ -28,32 +33,33 @@
         </nav>
     </div>
     <div class="pag1">
-        <div class="left">
-        <?php
-            for ($i = 0; $i < count($data); $i++) {
-                echo "<div class='container-table'>".
-                        "<div class='image-table'>".
-                        "<img src='data:image/jpeg;base64,".$data[$i]['foto_mesa']."'>".
-                        "</div>".
-                        "<div class='table-data'>".
-                        "<h1>Mesa: ".$data[$i]['nome_mesa']."</h1>".
-                        "<h3>Preço: ".$data[$i]['preco_mesa']." R$/h</h3>".
-                        "<h3>Capacidade : ".$data[$i]['capacidade_mesa']." pessoas</h3>".
-                        "<h3>Descrição: ".$data[$i]['descricao_mesa']."</h3>".
-                        "</div>".
-                        "<a href='./formreservasdemesa.php?id=".$data[$i]['id_mesa']."'><button>Reservar</button></a>". 
-                    "</div>";
-            }
-        ?>
-        </div>
-        <div class="rigth">
-            <div class="map">
-                <div class="image">
-                    <img src="./imagens/reservamesas/planta_rest.png" alt="">
-                </div>
+        <div class="box">
+            <div class="titulo">
+                <h1>Atualizar</h1>
+            </div>
+            <div class="form">
+                <form action="updateimage.php" method="POST" enctype="multipart/form-data" id="form">
+                    <label for="id_cliente">ID: </label>
+                    <input type="text" name="id_cliente" value="<?php echo($id)?>" id="id" readonly>
+                    <label for="image"></label>
+                    <input type="file" name="image" id ="inputImage">
+                    <div class="enviar">
+                        <input type="submit" value="submit" name="submit" id="submit">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
+    <script>
+        let form = document.querySelector("#form");
+        let inputImage = document.querySelector("#inputImage");
+        console.log(inputImage)
+        form.onsubmit=(e)=>{
+            if(!inputImage.value){
+                alert("Você deve alterar a imagem");
+                e.preventDefault();
+            }
+        }
+    </script>
 </body>
 </html>

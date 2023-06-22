@@ -1,9 +1,11 @@
 @import url(estr_global.css);
 .pag1{
+    display: flex;
+}
+.left{
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr ;
-    justify-items: center;
 }
 .box{
     height: 70vh;
@@ -51,7 +53,7 @@ select{
     min-height: 20vh;
     max-height: 30vh;
     display: flex;
-    border: 2px solid black;
+    border: 3px solid black;
     margin-top: 10px;
 }
 .image-table{
@@ -93,3 +95,30 @@ img{
     object-fit: cover;
 }
 
+.left,.rigth{
+    flex: 1;
+    flex: 1;
+}
+.rigth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vh;
+    height: 60vh;
+    width: 60vh;
+    background-color: #9b0202d2;
+    border-radius: 30px;
+}
+.image{
+    height: 55vh;
+    width: 55vh;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+}

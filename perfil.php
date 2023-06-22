@@ -55,6 +55,8 @@
                 <?php echo "<h1>Contato (Num.telefone ): ".$_SESSION['telefone']."<h1>"?>
                 <div class="edit">
                     <a href="./atualizardados.php"><button style="cursor:pointer;">Editar</button></a>
+                    <?php echo"<a href='alterimage.php?id=".$_SESSION['id']."'><button style='cursor:pointer;margin-left:2vh;'> Alterar Foto</button></a>";
+                          echo"<a href='defaultreservas.php?id=".$_SESSION['id']."'><button style='cursor:pointer;margin-left:2vh;'> Minhas Reservas</button></a>"?>
                 </div>
             </div>
         </div>
@@ -64,7 +66,7 @@
                     <?php echo "<h1>".$_SESSION['nome']."<h1>"?>
                 </div>
                 <div class="fotodocliente">
-                <?php echo "<td><img src='data:image/jpeg;base64,".$d['foto_produto']."'></td>";?>
+                <?php echo "<img src='data:image/jpeg;base64,".$d['foto_produto']."'>";?>
                 </div>
                 <div class="logout">
                     <button onclick="confirmed()" style="cursor: pointer;">Log-out</button>

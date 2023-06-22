@@ -47,8 +47,6 @@
             </nav>
         </div>
         <div class="theme">
-            <h1>Bucho de Bode</h1>
-            <h3>Restaurante</h3>
             <div class="button">
                 <a href="login.php"><button>Login/Cadastro</button></a>
             </div>
@@ -56,17 +54,24 @@
     </div>
 
     <div class="pag2">
-        <div class="texto">
-        <h1>Restaurante temático<br> Nordestino, só pra quem <br> ama o Nordeste</h1>
+        <div class="parteesquerda">
+            <div class="cardapio-container">
+                <div class="border"></div>
+                <div class="border2"></div>
+                <div class="border3"></div>
+                <div class="border4"></div>
+                <div class="image">
+                    <img src="" alt="">
+                    <button></button>
+                </div>
+            </div>
         </div>
-
-        <div class="cardapio-container">
-            <div class="border"></div>
-            <div class="border2"></div>
-            <div class="border3"></div>
-            <div class="border4"></div>
-            <div class="image">
-                
+        <div class="partedireita">
+            <div class="text-container">
+                <div class="border"></div>
+                <div class="border2"></div>
+                <div class="border3"></div>
+                <div class="border4"></div>
             </div>
         </div>
     </div>
