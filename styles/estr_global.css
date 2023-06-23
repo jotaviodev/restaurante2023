@@ -18,7 +18,7 @@ a{
 .main-menu{
     height: 10vh;
     width: 100%;
-
+    border-bottom: 2px solid black;
 }
 .menu{
     width: 30%;
@@ -38,7 +38,7 @@ a{
     font-size:x-large;
 }
 .main-menu ul li a{
-    color: black;
+    color: whitesmoke;
 }
 .main-menu a{
     height: 60%;

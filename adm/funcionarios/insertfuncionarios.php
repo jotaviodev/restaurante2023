@@ -8,9 +8,8 @@
     $emailDoAdm = $_POST['emailDoAdm'];
     $senhaDoAdm = $_POST['senhaDoAdm'];
     $telefoneDoAdm = $_POST['telefoneDoAdm'];
-    $fotoDoAdm = $_POST['fotoDoAdm'];
 
-    $query = "INSERT INTO funcionarios VALUES (0,'$nomeDoAdm','$cpfDoAdm','$sexoDoAdm','$cargoDoAdm','$emailDoAdm','$senhaDoAdm','$telefoneDoAdm','$fotoDoAdm','$salarioDoAdm')";
+    $query = "INSERT INTO funcionarios VALUES (0,'$nomeDoAdm','$cpfDoAdm','$sexoDoAdm','$cargoDoAdm','$emailDoAdm','$senhaDoAdm','$telefoneDoAdm','$salarioDoAdm')";
 
 // Executa a query
 $inserir = $conn->query($query);

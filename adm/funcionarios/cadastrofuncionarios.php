@@ -60,8 +60,6 @@ require("../validationlogadm.php");
                 <input type="password" name="senhaDoAdm">
                 <label for="telefoneDoAdm">Telefone: </label>
                 <input type="number" name="telefoneDoAdm"> 
-                <label for="fotoDoAdm">URL da Foto: </label>
-                <input type="text" name="fotoDoAdm">
                 <div class="enviar">
                     <input type="submit" value="enviar">
                 </div>

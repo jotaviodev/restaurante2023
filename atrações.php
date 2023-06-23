@@ -36,6 +36,9 @@
             color: #6c0202d2;
             margin-left: 2vh;
         }
+        .pag2 a{
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -43,7 +46,7 @@
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="./index.php"><img src="imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                <a href="./index.php"><img src="imagens/Logos/logobranca1.png" alt="" style="cursor: pointer;"></a>
                 </div>
                 <li><a href="./index.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Início</a></li>
                 <li><a href="./about.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Sobre nós</a></li>
@@ -72,7 +75,7 @@
                             for($i=0;$i<count($dataAtrac);$i++){
                                 $date = (string)$dataAtrac[$i]['data_atracao'];
                                 $dates = explode("-",$date);
-                                echo"<h2>".$dates[2]."/".$dates[1]."/".$dates[0].": ".$dataAtrac[$i]['nome_atracao']."</h2>";
+                                echo"<h2>".$dates[2]."/".$dates[1]."/".$dates[0].": <a href='./defaultatracoes.php?id=".$dataAtrac[$i]['id_atracao']."'>".$dataAtrac[$i]['nome_atracao']."</a></h2>";
                             }                        
                         ?>
                     </div>
@@ -91,13 +94,14 @@
             <div class="partedireita">
                 <div class="boxdireita">
                     <div class="titulo">
-                        <h1>Deseja se presentear?</h1>
+                        <h1>Deseja se apresentar?</h1>
                     </div>
                     <h2>Fale conosco</h2>
                     <hr>
                     <h1>WhatsApp: 3346-1480</h1>
                     <h1>Instagram: @Buchodebode</h1>
                     <h1>Facebook: Bucho de Bode</h1>
+                    <h1><a href="https://docs.google.com/forms/d/e/1FAIpQLSdOZgUumJ6WhuqOdEJQOKqC4RZIClBkXuaEA0yH1UOeqTK_vA/viewform?usp=sf_link">Formulário de Inscrição</a></h1>
                 </div>
             </div>
          </div>
@@ -162,4 +166,5 @@
             <h5 style="color: whitesmoke;">Copyright © 2023 Bucho de Bode - Todos os direitos reservados</h4>
         </div>
     </footer>
+    <script src="./scripts/funcoesglobais.js"></script>
 </html>

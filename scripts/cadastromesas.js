@@ -20,5 +20,15 @@ preco.addEventListener('keyup',(e)=>{
         preco.value = inValue
     }
 })
+let inValue2 = ""
+capacidade.addEventListener('keyup',(e)=>{
+    if (e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode == 8 || e.keyCode == 190 || e.keyCode == 188 || e.keyCode >= 96 && e.keyCode <= 105) {
+        inValue2 = capacidade.value;
+        capacidade.value = inValue2;
+    } else {
+        capacidade.value = inValue2
+    }
+})
+
 
 preco.addEventListener("input", (e) => e.preventDefault())

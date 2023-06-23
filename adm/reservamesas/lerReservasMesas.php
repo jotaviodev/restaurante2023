@@ -1,11 +1,10 @@
 <?php
 require("../validationlogadm.php");
 require('./readReservasMesas.php');
-$queryNomeCliente = "SELECT cliente.nome_cliente FROM reservamesa INNER JOIN cliente ON cliente.id_cliente = reservamesa.id_clientereserva;";
+$queryNomeCliente = "SELECT cliente.nome_cliente FROM reservamesa INNER JOIN cliente ON cliente.id_cliente = reservamesa.id_clientereserva order by reservamesa.id_reservamesa;";
 $queryNomeCliente = $conn->query($queryNomeCliente);
 $queryNomeCliente->execute();
 $dataNomeCliente = $queryNomeCliente->fetchAll();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +52,7 @@ $dataNomeCliente = $queryNomeCliente->fetchAll();
                     while($contador < count($data)){
                         echo "<tr>";
                         echo "<td>".$data[$contador]['id_reservamesa']."</td>";
-                        echo "<td> <a href='./defaultcliente.php?id=".$data[$contador]['id_clientereserva']."'>".$dataNomeCliente[$contador2][0]."</td>";
+                        echo "<td> <a href='./defaultcliente.php?id=".$data[$contador]['id_clientereserva']."'>".$dataNomeCliente[$contador][0]."</td>";
                         echo "<td> <a href='../mesas/lermesas.php'>".$data[$contador]['id_mesa']."</td>";
                         echo "<td>".$data[$contador]['data_reservamesa']."</td>";
                         echo "<td>".$data[$contador]['horario_reserva']."</td>";

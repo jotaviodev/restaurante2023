@@ -17,7 +17,7 @@ $bd_generos = array("M","F","U");
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="./index.php"><img src="imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                <a href="./index.php"><img src="imagens/Logos/logobranca1.png" alt="" style="cursor: pointer;"></a>
                 </div>
                 <li><a href="./index.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Início</a></li>
                 <li><a href="./about.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Sobre nós</a></li>
@@ -58,7 +58,7 @@ $bd_generos = array("M","F","U");
                     <label for="senha_cliente">Senha: </label>
                     <input type="text" name="senha_cliente" id="senha_cliente" value="<?php echo $_SESSION['senha']?>">
                     <label for="telefone_cliente">Telefone: </label>
-                    <input type="tel" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}"name="telefone_cliente" id="telefone_cliente" value="<?php echo $_SESSION['telefone']?>"placeholder="(XX)XXXXX-XXXX">
+                    <input type="text" name="telefone_cliente" id="telefone_cliente" value="<?php echo $_SESSION['telefone']?>"placeholder="(XX)XXXXX-XXXX">
                     <div class="enviar">
                         <input type="submit" value="submit" name="submit" id="submit">
                     </div>
@@ -67,5 +67,6 @@ $bd_generos = array("M","F","U");
         </div>
     </div>
     <script src="./scripts/atualizardados.js"></script>
+    <script src="./scripts/funcoesglobais.js"></script>
 </body>
 </html>

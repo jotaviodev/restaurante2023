@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <div class="menu">
-                    <a href="./index.php"><img src="imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+                <a href="./index.php"><img src="imagens/Logos/logobranca1.png" alt="" style="cursor: pointer;"></a>
                 </div>
                 <li><a href="./index.php" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Início</a></li>
                 <li><a href="./about.html" onmouseover="alteraCorMenu(this)" onmouseout="retornaCorMenu(this)" id="teste">Sobre nós</a></li>
@@ -54,6 +54,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="./scripts/funcoesglobais.js"></script>
 </body>
 </html>

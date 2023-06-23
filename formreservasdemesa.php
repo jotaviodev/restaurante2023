@@ -42,7 +42,7 @@
                         }
                 }
             }else{
-                echo "<script>alert('Data inválida! As reservas são referentes apenas ao ano atual.')</script>";
+                echo "<script>alert('Data inválida! As reservas só estão disponíveis para o ano atual e com no mínimo 1 dia de antecedência.')</script>";
             }
     }
 ?>
@@ -53,13 +53,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Produtos</title>
-    <link rel="stylesheet" href="./styles/reservasdemesas.css">
+    <link rel="stylesheet" href="./styles/formreservasdemesa.css">
 </head>
 <body>
     <div class="main-menu">
         <nav>
             <ul>
-                <a href="../index.php"><img src="./imagens/Logos/logopreta.png" alt="" style="cursor: pointer;"></a>
+            <a href="./index.php"><img src="imagens/Logos/logobranca1.png" alt="" style="cursor: pointer;"></a>
                 <li><a href="./index.php">Início</a></li>
                 <li><a href="./about.html">Sobre nós</a></li>
                 <li><a href="./cardápio.php">Nosso Cardápio</a></li>
@@ -101,5 +101,6 @@
         </div>
     </div>
     <script src="../../scripts/cadastroprodutos.js"></script>
+    <script src="./scripts/funcoesglobais.js"></script>
 </body>
 </html>

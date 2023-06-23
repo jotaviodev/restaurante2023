@@ -32,6 +32,12 @@
         $query = "INSERT INTO cliente (id_cliente,nome_cliente,sexo_cliente,email_cliente,senha_cliente,telefone_cliente,foto_cliente)VALUES (:id_cliente,:nome_cliente,:sexo_cliente,:email_cliente,:senha_cliente,:telefone_cliente,:foto_cliente)";
         $inserir = $conn->prepare($query);
         $inserir->execute($data);
+        echo "
+            <script>
+                alert('Cliente cadastrado com sucesso!');
+                window.location.href = '../../login.php'
+            </script>
+        ";
     }catch(Exception $e){
         echo "
             <script>

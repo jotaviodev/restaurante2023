@@ -1,19 +1,126 @@
-@import url(./estr_global.css);
+@import url(estr_global.css);
 .pag1{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.form .imagem{
-    flex: 1;
+.left{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr ;
 }
-.form .entrada{
-    flex: 1;
-}
-.form{
-    background-color: aliceblue;
-    height: 80vh;
+.box{
+    height: 70vh;
     width: 30vw;
+    background-color: rgba(240, 248, 255, 0.603);
     display: flex;
     flex-direction: column;
+}
+.titulo{
+    flex: 1;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+.form{
+    flex: 6;
+    display: flex;
+}
+.form form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+input{
+    width: 90%;
+    height: 3vh;
+    border: 2px solid black;
+}
+select{
+    width: 90%;
+    height: 3vh;
+}
+.enviar input{
+    width: 10vw;
+    height: 5vh;
+}
+
+.container-table{
+    background-color: #9b0202d2;
+    width: 60vw;
+    min-height: 20vh;
+    max-height: 30vh;
+    display: flex;
+    border: 3px solid black;
+    margin-top: 10px;
+}
+.image-table{
+    display: flex;
+    flex: 1.5;
+    background-color: aquamarine;
+}
+.table-data{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+.table-data h1{
+    margin-left: 40px;
+}
+.table-data h1,h2,h3{
+    color: whitesmoke;
+}
+.button{
+    margin-left: 20px;
+    width: 10vw;
+    height: 10vh;
+}
+button{
+    height: 100%;
+    width: 100%;
+    background-color:#9b0202d2;
+}
+a{
+    margin-top: 7vh;
+    color: whitesmoke;
+    width: 6vw;
+    height: 6vh;
+}
+/*Talvez mudar o object fit*/
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left,.rigth{
+    flex: 1;
+    flex: 1;
+}
+.rigth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vh;
+    height: 60vh;
+    width: 60vh;
+    background-color: #9b0202d2;
+    border-radius: 30px;
+}
+.image{
+    height: 55vh;
+    width: 55vh;
+}
+.image img{
+    height: 100%;
+    width: 100%;
 }
