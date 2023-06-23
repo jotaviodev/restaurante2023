@@ -21,6 +21,7 @@ $dados = $query->fetchAll();
             display:flex;
             align-items:center;
             justify-content:center;
+            flex-direction: column;
         }
         .container{
             width:80vh;
@@ -31,10 +32,18 @@ $dados = $query->fetchAll();
             align-items:center;
             justify-content:center;
             border-radius:20px;
+            border:3px solid black;
         }
         .container h1,h2{
             color:whitesmoke;
             font-size:xx-large;
+        }
+
+        .title{
+            flex:2;
+        }
+        .text{
+            flex:5;
         }
     </style>
 </head>
@@ -58,8 +67,15 @@ $dados = $query->fetchAll();
     <div class="pag1">
         <div class="container">
             <?php 
-                echo"<h1>".$dados[0]['nome_atracao']."</h1>";
-                echo"<h2>".$dados[0]['descricao_atracao']."</h2>";
+                echo"
+                <div class='title'>".
+                "<h1>".$dados[0]['nome_atracao']."</h1>".
+                "</div>";
+                echo"
+                <div class='text'>".
+                "<h2>".$dados[0]['descricao_atracao']."</h2>".
+                "</div>";
+                
             ?>
         </div>
     </div>
